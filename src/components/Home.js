@@ -1,39 +1,48 @@
+import { useEffect } from "react";
+import bootstrap from "bootstrap/dist/js/bootstrap.bundle";
 import img1 from "../img/pos&restaurant.jpg";
 import img2 from "../img/mobile.jpg";
 import img3 from "../img/webdevelopment.jpg";
 import img4 from "../img/customweb.jpg";
 
 export default function HomePageSlider() {
+   useEffect(() => {
+    const carouselElement = document.getElementById("carouselExampleFade");
+    new bootstrap.Carousel(carouselElement, {
+      interval: 3000,   // 3 seconds per slide
+      ride: "carousel", // auto-start
+      wrap: true,       // loop continuously
+      pause: false      // don't stop on hover
+    });
+  }, []);
+
   return (
     <section id="home">
       <div
         id="carouselExampleFade"
         className="carousel slide carousel-fade position-relative"
-        data-bs-interval="3000"
-        data-bs-ride="carousel"
-        data-bs-pause="false"
       >
         <div className="carousel-inner">
 
           {/* Slide 1 */}
           <div className="carousel-item active">
-            <img src={img1} className="d-block w-100 slider-img" alt="POS System" />
-            <div className="dark-overlay"></div>
-
-            <div className="carousel-caption fade-text d-flex flex-column align-items-center justify-content-center h-100">
-              <h1 className="fw-bold">POS for Restaurant & Bar</h1>
-              <p>Simple and efficient POS system for managing daily operations smoothly.</p>
-            </div>
-          </div>
-
-          {/* Slide 2 */}
-          <div className="carousel-item">
             <img src={img2} className="d-block w-100 slider-img" alt="Mobile App" />
             <div className="dark-overlay"></div>
 
             <div className="carousel-caption fade-text d-flex flex-column align-items-center justify-content-center h-100">
               <h1 className="fw-bold">Mobile App Development</h1>
               <p>High-performance Android & iOS apps with elegant UI/UX.</p>
+            </div>
+          </div>
+
+          {/* Slide 2 */}
+          <div className="carousel-item">
+            <img src={img4} className="d-block w-100 slider-img" alt="Custom Website" />
+            <div className="dark-overlay"></div>
+
+            <div className="carousel-caption fade-text d-flex flex-column align-items-center justify-content-center h-100">
+              <h1 className="fw-bold">Custom Website Development</h1>
+              <p>Fast, modern, responsive & SEO-optimized websites for your business.</p>
             </div>
           </div>
 
@@ -50,12 +59,12 @@ export default function HomePageSlider() {
 
           {/* Slide 4 */}
           <div className="carousel-item">
-            <img src={img4} className="d-block w-100 slider-img" alt="Custom Website" />
+            <img src={img1} className="d-block w-100 slider-img" alt="POS System" />
             <div className="dark-overlay"></div>
 
             <div className="carousel-caption fade-text d-flex flex-column align-items-center justify-content-center h-100">
-              <h1 className="fw-bold">Custom Website Development</h1>
-              <p>Fast, modern, responsive & SEO-optimized websites for your business.</p>
+              <h1 className="fw-bold">POS for Restaurant & Bar</h1>
+              <p>Simple and efficient POS system for managing daily operations smoothly.</p>
             </div>
           </div>
 

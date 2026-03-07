@@ -22,7 +22,7 @@ export default function ContactPage() {
               <h4 className="card-title-custom">
                 <span className="animated-icon">📞</span> Phone
               </h4>
-              <p className="contact-text">+95 912345678</p>
+              <p className="contact-text">09 456 335 110</p>
             </Card>
           </Col>
 
@@ -31,7 +31,7 @@ export default function ContactPage() {
               <h4 className="card-title-custom">
                 <span className="animated-icon">📍</span> Address
               </h4>
-              <p className="contact-text">Yangon, Myanmar</p>
+              <p className="text-sm">36th street Anawrahta Road, Kyauktada Township, Yangon, Myanmar</p>
             </Card>
           </Col>
         </Row>
@@ -54,7 +54,7 @@ export default function ContactPage() {
                 <span className="animated-icon">📝</span> Quotation
               </h4>
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSdFpcJje_EUfCMz8vvo0up-WtSXQeaTe9SYVoYRXeNBayzOWw/viewform?usp=header"
+                href="https://docs.google.com/forms/d/e/1FAIpQLScOdgdWC-QP8n_NwHSu_Ir35swQ8NbtNk54LD7iffNdcOdSFA/viewform?usp=dialog"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-success contact-btn d-flex justify-content-center align-items-center gap-2"

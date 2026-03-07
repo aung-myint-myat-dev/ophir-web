@@ -33,10 +33,10 @@ function AppService() {
         {/* Service Cards */}
         <Row className="g-4">
           {[
-            {
-              img: service3,
-              title: "POS for Restaurant & Bar",
-              text: "Simple and efficient POS system for managing daily operations smoothly.",
+             {
+              img: service2,
+              title: "Mobile App Development",
+              text: "High-performance Android & iOS apps with elegant UI/UX.",
             },
             {
               img: service1,
@@ -44,14 +44,14 @@ function AppService() {
               text: "Fast, modern, responsive & SEO-optimized websites for your business.",
             },
             {
-              img: service2,
-              title: "Mobile App Development",
-              text: "High-performance Android & iOS apps with elegant UI/UX.",
-            },
-            {
               img: service4,
               title: "Ecommerce Development",
               text: "Secure online platforms with product, payment & delivery management.",
+            },
+            {
+              img: service3,
+              title: "POS for Restaurant & Bar",
+              text: "Simple and efficient POS system for managing daily operations smoothly.",
             },
           ].map((service, i) => (
             <Col xs={12} md={6} key={i}>
