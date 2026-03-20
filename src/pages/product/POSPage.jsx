@@ -3,15 +3,10 @@ import { Container, Button, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 
+import { assets } from '../../constants';
+
 // POS images
-import pos1 from "../img/POS1.png";
-import pos2 from "../img/POS2.png";
-import pos3 from "../img/POS3.png";
-import pos4 from "../img/POS4.png";
-import pos5 from "../img/POS5.png";
-import pos6 from "../img/POS6.png";
-import pos7 from "../img/POS7.png";
-import pos8 from "../img/POS8.png";
+const pos_previews = assets.ophirpos_previews;
 
 function POSPage() {
   const navigate = useNavigate();
@@ -28,11 +23,7 @@ function POSPage() {
       });
     }, 100);
   };
-
-  const slides = [
-    { img: pos1 }, { img: pos2 }, { img: pos3 }, { img: pos4 }, { img: pos5 }, { img: pos6 }, { img: pos7 }, { img: pos8 },
-  ];
-
+  
   return (
     <div
       className="py-2 min-vh-100"
@@ -72,7 +63,7 @@ function POSPage() {
         {/* Carousel */}
         <Card className="border-0 shadow-sm rounded-4 mb-4 pos-carousel-wrapper mx-auto">
           <Carousel fade interval={3000} pause="hover">
-            {slides.map((slide, index) => (
+            {pos_previews.map((slide, index) => (
               <Carousel.Item key={index} className="pos-carousel-item">
                 <img
                   src={slide.img}

@@ -1,4 +1,6 @@
-import img1 from "../img/logoicon.png";
+import { assets } from '../constants';
+
+const img1 = assets.APP_LOGO;
 
 export default function AppRoot() {
   return (

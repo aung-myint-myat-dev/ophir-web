@@ -590,7 +590,7 @@ section {
 }
 
 .animated-icon {
-  font-size: 2rem;
+  font-size: 1rem;
   animation: floatIcon 2s infinite ease-in-out;
 }
 
@@ -853,3 +853,14 @@ section {
   }
 }
 
+/* Pricing Custom Hover Effect */
+.pricing-card {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px); /* Lifts the card up */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; /* Makes shadow deeper */
+  border-color: #5bb450 !important; /* Optional: highlights the border on hover */
+}

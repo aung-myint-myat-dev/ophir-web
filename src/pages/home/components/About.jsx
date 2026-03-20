@@ -1,0 +1,122 @@
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Carousel from "react-bootstrap/Carousel";
+
+import { assets } from '../../../constants';
+
+const project_logos = assets.project_logos;
+const images = [...assets.lovecar_previews, ...assets.stargrade_previews];
+
+function AppAbout() {
+  return (
+    <section id="about" className="bg-light overflow-hidden">
+      <Container className="py-lg-5">
+        <Row className="pt-5 align-items-center g-5">
+          {/* LEFT SIDE - TEXT CONTENT */}
+          <Col lg={7} md={12}>
+            <div className="ps-lg-4">
+              <div className="d-flex align-items-center gap-2 mb-3">
+                <div
+                  className="bg-success rounded-pill"
+                  style={{ width: "40px", height: "3px" }}
+                ></div>
+                <span className="text-success fw-bold text-uppercase small tracking-wider">
+                  Our Story
+                </span>
+              </div>
+
+              <h2 className="display-5 fw-bold text-dark mb-4">
+                Innovating IT Solutions <br />
+                <span className="opacity-80" style={{color: "#5bb450"}}>
+                  for your Business.
+                </span>
+              </h2>
+
+              <p
+                className="lead text-secondary mb-4 lh-base"
+                style={{ fontSize: "1.1rem" }}
+              >
+                Ophir IT Solutions is a branch of our mother company{" "}
+                <strong className="text-dark">
+                  Call2Clean Janitorial Service Company Limited
+                </strong>
+                . We are dedicated to providing quality IT services that support
+                and enhance SME business owners.
+              </p>
+
+              <p className="text-muted mb-5 shadow-sm p-4 rounded-4 border-start border-success border-4 bg-white">
+                We believe every business owner deserves a professional website
+                or app. With the rapid growth of e-commerce in Myanmar,
+                transforming your business to an online platform isn't just an
+                option—it's a necessity for growth.
+              </p>
+            </div>
+          </Col>
+
+          {/* RIGHT SIDE */}
+          <Col lg={5} md={12}>
+            <div className="position-relative d-flex align-items-center justify-content-center">
+              <div
+                className="position-absolute top-50 start-50 translate-middle rounded-circle opacity-25 bg-success"
+                style={{
+                  width: "300px",
+                  height: "300px",
+                  filter: "blur(80px)",
+                  zIndex: 0,
+                }}
+              ></div>
+
+              <Carousel
+                interval={2500}
+                pause={false}
+                fade
+                indicators={false}
+                controls={false}
+                className="w-100"
+                style={{ zIndex: 1 }}
+              >
+                {images.map((img, index) => (
+                  <Carousel.Item key={index}>
+                    <div
+                      className="d-flex align-items-center justify-content-center w-100"
+                      style={{
+                        height: "300px",
+                        perspective: "1000px",
+                      }}
+                    >
+                      <img
+                        src={img}
+                        alt={`Slide ${index + 1}`}
+                        className="img-fluid animate-pulse"
+                        style={{
+                          maxHeight: "320px",
+                          width: "auto",
+                          objectFit: "contain",
+                          filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.1))",
+                          animation:
+                            "zoomInOut 2.5s infinite alternate ease-in-out",
+                        }}
+                      />
+                    </div>
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+
+              <style>
+                {`
+        @keyframes zoomInOut {
+          0% { transform: scale(0.95); opacity: 0.8; }
+          100% { transform: scale(1.05); opacity: 1; }
+        }
+      `}
+              </style>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </section>
+  );
+}
+
+export default AppAbout;

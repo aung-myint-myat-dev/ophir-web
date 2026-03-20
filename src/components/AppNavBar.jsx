@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
-import img1 from "../img/logoicon.png";
 
-function AppNavbar() {
+import { assets } from '../constants';
+
+const img1 = assets.APP_LOGO;
+
+export default function AppNavbar() {
   const [active, setActive] = useState("home");
   const [scrolled, setScrolled] = useState(false);
 
@@ -48,6 +51,7 @@ function AppNavbar() {
     { label: "ABOUT US", id: "about" },
     { label: "SERVICES", id: "services" },
     { label: "PROJECT", id: "project" },
+    { label: "PRICING", id: "pricing" },
     { label: "CONTACT", id: "contact" },
   ];
 
@@ -100,5 +104,3 @@ function AppNavbar() {
     </nav>
   );
 }
-
-export default AppNavbar;

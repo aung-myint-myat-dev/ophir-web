@@ -3,8 +3,10 @@ import { Container, Button, Row, Col, Card } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 
-import img1 from "../img/POS1.png";
-import img2 from "../img/POS2.png";
+import { assets } from "../../constants";
+
+const img1 = assets.APP_LOGO;
+const img2 = assets.background;
 
 function StarGradePage() {
   const navigate = useNavigate();
@@ -22,9 +24,7 @@ function StarGradePage() {
     }, 100);
   };
 
-  const slides = [
-    { img: img1 }, { img: img2 }
-  ];
+  const slides = [{ img: img1 }, { img: img2 }];
 
   return (
     <div
@@ -62,7 +62,7 @@ function StarGradePage() {
         <Card className="border-0 shadow-sm rounded-4 mb-4 pos-carousel-wrapper">
           <Carousel fade interval={3000} pause="hover">
             {slides.map((slide, index) => (
-              <Carousel.Item key={index} >
+              <Carousel.Item key={index}>
                 <img
                   src={slide.img}
                   className="d-block pos-carousel-img"

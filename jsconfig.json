@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@api": ["api"],
+      "@api/*": ["api/*"],
+      "@components": ["components"],
+      "@components/*": ["components/*"],
+      "@constants": ["constants"],
+      "@constants/*": ["constants/*"],
+      "@models": ["models"],
+      "@models/*": ["models/*"],
+      "@pages": ["pages"],
+      "@pages/*": ["pages/*"],
+      "@routes": ["routes"],
+      "@routes/*": ["routes/*"],
+      "@state": ["state"],
+      "@state/*": ["state/*"],
+      "@theme": ["theme"],
+      "@theme/*": ["theme/*"],
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

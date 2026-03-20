@@ -1,15 +1,18 @@
 import { useEffect } from "react";
 import bootstrap from "bootstrap/dist/js/bootstrap.bundle";
-import img1 from "../img/pos&restaurant.jpg";
-import img2 from "../img/mobile.jpg";
-import img3 from "../img/webdevelopment.jpg";
-import img4 from "../img/customweb.jpg";
 
-export default function HomePageSlider() {
+import { assets } from '../../../constants';
+
+const img1 = assets.slider_images[0];
+const img2 = assets.slider_images[1];
+const img3 = assets.slider_images[2];
+const img4 = assets.slider_images[3];
+
+export default function HomeSlider() {
    useEffect(() => {
     const carouselElement = document.getElementById("carouselExampleFade");
     new bootstrap.Carousel(carouselElement, {
-      interval: 3000,   // 3 seconds per slide
+      interval: 5000,   // 3 seconds per slide
       ride: "carousel", // auto-start
       wrap: true,       // loop continuously
       pause: false      // don't stop on hover
@@ -42,7 +45,8 @@ export default function HomePageSlider() {
 
             <div className="carousel-caption fade-text d-flex flex-column align-items-center justify-content-center h-100">
               <h1 className="fw-bold">Custom Website Development</h1>
-              <p>Fast, modern, responsive & SEO-optimized websites for your business.</p>
+              <p>Fast, modern, responsive & SEO-optimized websites
+                <span className="d-block">for your business.</span></p>
             </div>
           </div>
 
@@ -53,7 +57,9 @@ export default function HomePageSlider() {
 
             <div className="carousel-caption fade-text d-flex flex-column align-items-center justify-content-center h-100">
               <h1 className="fw-bold">Ecommerce Development</h1>
-              <p>Secure online platforms with product, payment & delivery management.</p>
+              <p>Secure online platforms with product, 
+                <span className="d-lock">payment & delivery management.</span>
+              </p>
             </div>
           </div>
 
