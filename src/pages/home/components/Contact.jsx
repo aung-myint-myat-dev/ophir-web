@@ -118,7 +118,7 @@ export default function ContactPage() {
                 <span className="visually-hidden">Active</span>
               </div>
               <span className="fs-6 fw-bold text-success">
-                For cleaning service Call2Clean visit website
+                For your Cleaning Service Needs CHECK HERE
                 <i className="bi bi-arrow-right-short ms-1"></i>
               </span>
             </a>
