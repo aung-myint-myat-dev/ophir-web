@@ -5,8 +5,8 @@ import Carousel from "react-bootstrap/Carousel";
 
 import { assets } from "../../constants";
 
-const img1 = assets.APP_LOGO;
-const img2 = assets.background;
+const img1 = assets.APP_LOGO[0];
+const img2 = assets.background[1];
 
 function StarGradePage() {
   const navigate = useNavigate();

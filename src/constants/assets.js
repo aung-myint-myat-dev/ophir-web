@@ -13,14 +13,19 @@ import slider_posrestaurant from "../assets/images/slider-images/pos&restaurant.
 import slider_webdevelopment from "../assets/images/slider-images/webdevelopment.jpg";
 
 // FoodBurma Previews
-import foodburma_preview_1 from "../assets/images/foodburma-previews/1.png";
+import foodburma_preview_1 from "../assets/images/foodburma-previews/fb-1.png";
+import foodburma_preview_2 from "../assets/images/foodburma-previews/fb-2.png";
+import foodburma_preview_3 from "../assets/images/foodburma-previews/fb-4.png";
+
+//phone frame
+import iphone_frame from "../assets/images/iphone-frame.png"
 
 // LoveCar Previews
-import lovecar_preview_1 from "../assets/images/lovecar-previews/1.png";
-import lovecar_preview_2 from "../assets/images/lovecar-previews/2.png";
-import lovecar_preview_3 from "../assets/images/lovecar-previews/3.png";
-import lovecar_preview_4 from "../assets/images/lovecar-previews/4.png";
-import lovecar_preview_5 from "../assets/images/lovecar-previews/5.png";
+import lovecar_preview_1 from "../assets/images/lovecar-previews/lovecar-cbm.png";
+import lovecar_preview_2 from "../assets/images/lovecar-previews/lovecar-coin.png";
+import lovecar_preview_3 from "../assets/images/lovecar-previews/lovecar-discount.png";
+import lovecar_preview_4 from "../assets/images/lovecar-previews/lovecar-homepage.png";
+// import lovecar_preview_5 from "../assets/images/lovecar-previews/lovecar-newday.png";
 
 // OphirPOS Previews
 import ophirpos_preview_1 from "../assets/images/ophirpos-previews/1.png";
@@ -44,6 +49,12 @@ import sayazawmaths_logo_img from "../assets/images/project-logos/sayazawmaths.p
 import stargrade_logo_img from "../assets/images/project-logos/stargrade.webp";
 import zogenealogy_logo_img from "../assets/images/project-logos/zogenealogy.png";
 
+//icon pngs
+import icon1 from "../assets/images/icon1.png"
+import icon2 from "../assets/images/icon2.png"
+import icon3 from "../assets/images/icon3.png"
+import icon4 from "../assets/images/icon4.png"
+
 // ==================
 // Arrays & Exports
 // ==================
@@ -55,14 +66,16 @@ export const slider_images = [
   slider_webdevelopment,
 ];
 
-export const foodburma_previews = [foodburma_preview_1];
+export const foodburma_previews = [foodburma_preview_1,foodburma_preview_2,foodburma_preview_3];
+
+export const frame = [iphone_frame];
 
 export const lovecar_previews = [
   lovecar_preview_1,
   lovecar_preview_2,
   lovecar_preview_3,
   lovecar_preview_4,
-  lovecar_preview_5,
+  // lovecar_preview_5,
 ];
 
 export const ophirpos_previews = [
@@ -100,3 +113,10 @@ export {
   stargrade_logo_img as stargrade_logo,
   zogenealogy_logo_img as zogenealogy_logo,
 };
+
+export const icon = [
+  icon1,
+  icon2,
+  icon3,
+  icon4
+]

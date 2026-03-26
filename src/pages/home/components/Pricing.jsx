@@ -1,46 +1,50 @@
 import { FaCheck } from "react-icons/fa6";
+import { FaXmark } from "react-icons/fa6";
 
 export default function Pricing() {
   return (
-    <section
-      className="py-5 bg-light"
-      id="pricing"
-      style={{ backgroundColor: "#f8f9ff" }}
-    >
+    <section className="py-5 bg-light" id="pricing">
       <div className="container">
         {/* Header Section */}
         <div className="text-center mb-5">
-          <h2 className="fw-bold display-5">Choose your right plan!</h2>
+          <h2 className="fw-bold display-5">Choose Your Plan</h2>
           <p className="text-secondary mx-auto" style={{ maxWidth: "600px" }}>
-            Select from best plans, ensuring a perfect match. Need more or less?
-            Customize your subscription for a seamless fit!
+            From high-converting landing pages to complex enterprise platforms,
+            select the perfect architecture for your digital presence.
           </p>
-          <p>• Hosting Fees will be provided by Customer •</p>
+          <div className="mt-3">
+            <span className="badge border text-dark px-3 py-2 rounded-pill shadow-sm">
+              • Hosting fees are provided by the customer •
+            </span>
+          </div>
         </div>
 
         <div className="row g-4 justify-content-center">
           {/* Plan 1: Pro */}
           <div className="col-12 col-lg-4">
-            <div className="card h-100 border-0 border-transparent shadow-sm p-4 rounded-4 pricing-card">
+            <div className="card h-100 border-0 shadow-sm p-4 rounded-4 pricing-card">
               <div className="card-body">
                 <span
-                  className="badge rounded-pill mb-3 px-3 py-2"
+                  className="badge mb-3 px-3 py-2"
                   style={{ backgroundColor: "#5bb450" }}
                 >
                   Pro
                 </span>
-                <p className="text-muted small">
-                  Ideal for those who've already got their website up and
-                  running and are seeking assistance.
+                <p className="small text-muted">
+                  Perfect for startups. A high-converting
+                  <strong> Single-Page Website</strong> to get you online fast.
                 </p>
-                <h2 className="fw-bold mb-4">300,000 MMK</h2>
+                <h2 className="fw-bold mb-4">400,000 MMK</h2>
                 <hr className="text-muted opacity-25" />
                 <ul className="list-unstyled mt-4">
-                  <PricingFeature text="3-5 day turnaround" />
-                  <PricingFeature text="Native Development" />
-                  <PricingFeature text="Task delivered one-by-one" />
-                  <PricingFeature text="Dedicated dashboard" />
-                  <PricingFeature text="Updates via Dashboard & Slack" />
+                  <PricingFeature text="Single Page Architecture" />
+                  <PricingFeature text="Mobile-Responsive Design" />
+                  <PricingFeature text="Pre-designed Layout" />
+                  <PricingFeature text="Basic Contact Form" />
+                  <PricingFeature text="Standard Deployment" />
+                  <PricingFeature text="Multi-Page Layout" isMissing />
+                  <PricingFeature text="CRM Development" isMissing />
+                  <PricingFeature text="CMS Development" isMissing />
                 </ul>
               </div>
             </div>
@@ -49,30 +53,32 @@ export default function Pricing() {
           {/* Plan 2: Pro Plus */}
           <div className="col-12 col-lg-4">
             <div
-              className="card h-100 border-2 border-transparent shadow-sm p-4 rounded-4 pricing-card"
+              className="card h-100 border-2 shadow-sm p-4 rounded-4 pricing-card"
               style={{ borderColor: "#5bb450" }}
             >
               <div className="card-body">
                 <span
-                  className="badge rounded-pill mb-3 px-3 py-2"
+                  className="badge mb-3 px-3 py-2"
                   style={{ backgroundColor: "#5bb450" }}
                 >
                   Pro Plus
                 </span>
-                <p className="text-muted small">
-                  Ideal if you want to build or scale your website fast, with
-                  the strategy calls included.
+                <p className="small text-muted">
+                  Ideal for growing businesses. A comprehensive
+                  <strong> Multi-Page Website</strong> with advanced navigation.
                 </p>
-                <h2 className="fw-bold mb-4">800,000 MMK</h2>
+                <h2 className="fw-bold mb-4">900,000 MMK</h2>
                 <hr className="text-muted opacity-25" />
                 <ul className="list-unstyled mt-4">
-                  <PricingFeature text="1-3 day turnaround" />
-                  <PricingFeature text="Monthly strategy call" />
-                  <PricingFeature text="Commercial license" />
-                  <PricingFeature text="Native Development" />
-                  <PricingFeature text="Tasks delivered one-by-one" />
-                  <PricingFeature text="Dedicated dashboard" />
-                  <PricingFeature text="Updates via Dashboard & Slack" />
+                  <PricingFeature text="Up to 5 Pages" />
+                  <PricingFeature text="Custom UI/UX Design" />
+                  <PricingFeature text="Basic SEO Setup" />
+                  <PricingFeature text="Blog/News Integration" />
+                  <PricingFeature text="Email Integration" />
+                  <PricingFeature text="Contact Form with Email" />
+                  <PricingFeature text="Multi-Page Layout" isMissing />
+                  <PricingFeature text="CRM Development" isMissing />
+                  <PricingFeature text="CMS Development" isMissing />
                 </ul>
               </div>
             </div>
@@ -81,28 +87,32 @@ export default function Pricing() {
           {/* Plan 3: Custom */}
           <div className="col-12 col-lg-4">
             <div
-              className="card h-100 border-0 border-transparent shadow-sm p-4 rounded-4 pricing-card"
+              className="card h-100 border-0 shadow-sm p-4 rounded-4 pricing-card"
               style={{
                 background: "linear-gradient(180deg, #EBF7ED 0%, #ffffff 100%)",
               }}
             >
               <div className="card-body">
-                <span className="badge bg-white text-dark border rounded-pill mb-3 px-3 py-2">
+                <span
+                  className="badge bg-white mb-3 px-3 py-2 border"
+                  style={{ color: "#5bb450" }}
+                >
                   Custom
                 </span>
-                <p className="text-muted small">
-                  If these plans don't fit, let's create one that suits.
-                  Customize your subscription for a perfect fit!
+                <p className="small text-muted">
+                  For complex requirements. <strong>Full customization </strong>
+                  tailored to your specific software or IT needs.
                 </p>
-                <h2 className="fw-bold mb-4">Let's Talks!</h2>
+                <h2 className="fw-bold mb-4">Negotiable</h2>
                 <hr className="text-muted opacity-25" />
                 <ul className="list-unstyled mt-4">
-                  <PricingFeature text="Everything in design & development" />
-                  <PricingFeature text="Strategy workshop" />
-                  <PricingFeature text="Priority support" />
-                  <PricingFeature text="Multiple tasks at once" />
-                  <PricingFeature text="Ongoing autonomous A/B testing" />
-                  <PricingFeature text="Advanced custom development" />
+                  <PricingFeature text="Advanced UI/UX Design" />
+                  <PricingFeature text="Full Source Code Access" />
+                  <PricingFeature text="Database Architecture" />
+                  <PricingFeature text="Third-party API Integrations" />
+                  <PricingFeature text="CRM Development" />
+                  <PricingFeature text="CMS Development" />
+                  <PricingFeature text="Priority Maintenance" />
                 </ul>
               </div>
             </div>
@@ -113,15 +123,28 @@ export default function Pricing() {
   );
 }
 
-// Helper component for the checkmarks
-function PricingFeature({ text }) {
+function PricingFeature({ text, isMissing = false }) {
   return (
-    <li className="mb-3 d-flex align-items-start">
-      <FaCheck
-        className="me-2 mt-1 flex-shrink-0"
-        style={{ color: "#5bb450", fontSize: "14px" }}
-      />
-      <span className="small">{text}</span>
+    <li
+      className={`mb-3 d-flex align-items-start ${isMissing ? "text-muted opacity-50" : ""}`}
+    >
+      {isMissing ? (
+        <FaXmark
+          className="me-2 mt-1 flex-shrink-0"
+          style={{ color: "#dc3545", fontSize: "14px" }}
+        />
+      ) : (
+        <FaCheck
+          className="me-2 mt-1 flex-shrink-0"
+          style={{ color: "#5bb450", fontSize: "14px" }}
+        />
+      )}
+      <span
+        className="small"
+        style={{ textDecoration: isMissing ? "line-through" : "none" }}
+      >
+        {text}
+      </span>
     </li>
   );
 }

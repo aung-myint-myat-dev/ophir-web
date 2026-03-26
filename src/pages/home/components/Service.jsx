@@ -2,10 +2,10 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 import { assets } from '../../../constants';
 
-const service1 = assets.call2clean_logo;
-const service2 = assets.ophirpos_logo;
-const service3 = assets.lovecar_logo;
-const service4 = assets.sayazawmaths_logo;
+const icon1 = assets.icon[0];
+const icon2 = assets.icon[1];
+const icon3 = assets.icon[2];
+const icon4 = assets.icon[3];
 const background = assets.background;
 
 function AppService() {
@@ -24,7 +24,7 @@ function AppService() {
 
       <Container className="position-relative z-1">
         <div className="text-center mb-5">
-          <h2 className="display-4 fw-bold text-white mb-3">Our Services</h2>
+          <h2 className="display-4 fw-bold text-white mb-3 hero-section">Our Services</h2>
           <p
             className="lead text-white-50 mx-auto"
             style={{ maxWidth: "600px" }}
@@ -38,22 +38,22 @@ function AppService() {
         <Row className="g-4">
           {[
             {
-              img: service2,
+              img: icon2,
               title: "Mobile App Development",
               text: "High-performance Android & iOS apps with elegant UI/UX.",
             },
             {
-              img: service1,
-              title: "Custom Website Development",
+              img: icon1,
+              title: "Website Development",
               text: "Fast, modern, responsive & SEO-optimized websites.",
             },
             {
-              img: service4,
+              img: icon3,
               title: "Ecommerce Development",
               text: "Secure online platforms with product & payment management.",
             },
             {
-              img: service3,
+              img: icon4,
               title: "POS for Restaurant & Bar",
               text: "Simple and efficient POS system for managing daily operations.",
             },
@@ -88,12 +88,12 @@ function AppService() {
                   </div>
 
                   {/* Text Content */}
-                  <h5 className="fw-bold text-dark mb-2 mt-2">
+                  <h5 className="fw-bold text-dark mb-2 mt-2 hero-section">
                     {service.title}
                   </h5>
 
                   <p
-                    className="text-secondary flex-grow-1"
+                    className="flex-grow-1"
                     style={{ fontSize: "0.9rem", lineHeight: "1.5" }}
                   >
                     {service.text}
@@ -104,9 +104,8 @@ function AppService() {
           ))}
         </Row>
 
-        {/* Phase Boxes */}
         <div className="mt-2 pt-5">
-          <h3 className="text-center text-white fw-bold mb-5">
+          <h3 className="text-center text-white fw-bold mb-4">
             Our Management Process
           </h3>
           <Row className="g-3 justify-content-center">

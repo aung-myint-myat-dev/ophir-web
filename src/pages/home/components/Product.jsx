@@ -1,8 +1,9 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
-import { assets } from '../../../constants';
+import { assets } from "../../../constants";
 
 const item1 = assets.lovecar_logo;
 const item2 = assets.sayazawmaths_logo;
@@ -13,6 +14,7 @@ const item6 = assets.zogenealogy_logo;
 const item7 = assets.call2clean_logo;
 
 function Product() {
+
   const items = [
     {
       img: item1,
@@ -42,7 +44,7 @@ function Product() {
 
     {
       img: item4,
-      title: "Star Grade Education (App)",
+      title: "Star Grade Education",
       disabled: true,
       links: [{ label: "View More", url: "/#star-grade" }],
     },
@@ -75,9 +77,7 @@ function Product() {
     <div
       className=" py-5"
       style={{
-        backgroundColor: "#fcfdfe",
-        backgroundImage: "radial-gradient(#e1e5ea 0.8px, transparent 0.8px)",
-        backgroundSize: "24px 24px",
+        backgroundColor: "light",
       }}
     >
       <section id="project">
@@ -104,7 +104,7 @@ function Product() {
                       alt={item.title}
                       className="img-fluid"
                       style={{
-                        maxHeight: "50px",
+                        maxHeight: "70px",
                         objectFit: "contain",
                       }}
                     />

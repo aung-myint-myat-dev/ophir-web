@@ -12,7 +12,7 @@ export default function HomeSlider() {
    useEffect(() => {
     const carouselElement = document.getElementById("carouselExampleFade");
     new bootstrap.Carousel(carouselElement, {
-      interval: 5000,   // 3 seconds per slide
+      interval: 5000,   // 5 seconds per slide
       ride: "carousel", // auto-start
       wrap: true,       // loop continuously
       pause: false      // don't stop on hover
@@ -58,7 +58,7 @@ export default function HomeSlider() {
             <div className="carousel-caption fade-text d-flex flex-column align-items-center justify-content-center h-100">
               <h1 className="fw-bold">Ecommerce Development</h1>
               <p>Secure online platforms with product, 
-                <span className="d-lock">payment & delivery management.</span>
+                <span className="d-lock"> payment & delivery management.</span>
               </p>
             </div>
           </div>

@@ -3,10 +3,15 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
 
-import { assets } from '../../../constants';
+import { assets } from "../../../constants";
 
-const project_logos = assets.project_logos;
-const images = [...assets.lovecar_previews, ...assets.stargrade_previews];
+// const project_logos = assets.project_logos;
+const images = [
+  ...assets.lovecar_previews,
+  // ...assets.stargrade_previews,
+  ...assets.foodburma_previews,
+  ...assets.frame,
+];
 
 function AppAbout() {
   return (
@@ -28,13 +33,13 @@ function AppAbout() {
 
               <h2 className="display-5 fw-bold text-dark mb-4">
                 Innovating IT Solutions <br />
-                <span className="opacity-80" style={{color: "#5bb450"}}>
+                <span className="opacity-80" style={{ color: "#5bb450" }}>
                   for your Business.
                 </span>
               </h2>
 
               <p
-                className="lead text-secondary mb-4 lh-base"
+                className="fs-6 mb-4 lh-base"
                 style={{ fontSize: "1.1rem" }}
               >
                 Ophir IT Solutions is a branch of our mother company{" "}
@@ -45,7 +50,7 @@ function AppAbout() {
                 and enhance SME business owners.
               </p>
 
-              <p className="text-muted mb-5 shadow-sm p-4 rounded-4 border-start border-success border-4 bg-white">
+              <p className="mb-5 shadow-sm p-4 rounded-4 border-start border-success border-4 bg-white">
                 We believe every business owner deserves a professional website
                 or app. With the rapid growth of e-commerce in Myanmar,
                 transforming your business to an online platform isn't just an
@@ -60,57 +65,67 @@ function AppAbout() {
               <div
                 className="position-absolute top-50 start-50 translate-middle rounded-circle opacity-25 bg-success"
                 style={{
-                  width: "300px",
-                  height: "300px",
+                  width: "200px",
+                  height: "200px",
                   filter: "blur(80px)",
                   zIndex: 0,
                 }}
               ></div>
 
-              <Carousel
-                interval={2500}
-                pause={false}
-                fade
-                indicators={false}
-                controls={false}
-                className="w-100"
-                style={{ zIndex: 1 }}
+              {/* Phone Wrapper */}
+              <div
+                className="position-relative"
+                style={{ width: "200px", zIndex: 1 }}
               >
-                {images.map((img, index) => (
-                  <Carousel.Item key={index}>
-                    <div
-                      className="d-flex align-items-center justify-content-center w-100"
-                      style={{
-                        height: "300px",
-                        perspective: "1000px",
-                      }}
-                    >
-                      <img
-                        src={img}
-                        alt={`Slide ${index + 1}`}
-                        className="img-fluid animate-pulse"
-                        style={{
-                          maxHeight: "320px",
-                          width: "auto",
-                          objectFit: "contain",
-                          filter: "drop-shadow(0 10px 20px rgba(0,0,0,0.1))",
-                          animation:
-                            "zoomInOut 2.5s infinite alternate ease-in-out",
-                        }}
-                      />
-                    </div>
-                  </Carousel.Item>
-                ))}
-              </Carousel>
+                {/* THE IPHONE FRAME */}
+                <img
+                  src={assets.frame}
+                  alt="Phone Frame"
+                  className="img-fluid position-relative"
+                  style={{ zIndex: 2, pointerEvents: "none" }}
+                />
 
-              <style>
-                {`
-        @keyframes zoomInOut {
-          0% { transform: scale(0.95); opacity: 0.8; }
-          100% { transform: scale(1.05); opacity: 1; }
-        }
-      `}
-              </style>
+                {/* THE SCREEN CONTENT (CAROUSEL) */}
+                <div
+                  className="position-absolute"
+                  style={{
+                    top: "2%", 
+                    left: "5%", 
+                    right: "5%",
+                    bottom: "2%",
+                    overflow: "hidden",
+                    borderRadius: "35px", 
+                    zIndex: 1,
+                  }}
+                >
+                  <Carousel
+                    interval={2500}
+                    pause={false}
+                    fade
+                    indicators={false}
+                    controls={false}
+                    className="h-100"
+                  >
+                    {[
+                      ...assets.lovecar_previews,
+                      // ...assets.stargrade_previews,
+                      ...assets.foodburma_previews,
+                    ].map((img, index) => (
+                      <Carousel.Item key={index} className="h-100">
+                        <img
+                          src={img}
+                          alt={`Screenshot ${index + 1}`}
+                          className="w-100 h-100"
+                          style={{
+                            objectFit: "cover",
+                            objectPosition: "top",
+                          }}
+                        />
+                      </Carousel.Item>
+                    ))}
+                  </Carousel>
+                </div>
+              </div>
             </div>
           </Col>
         </Row>

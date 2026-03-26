@@ -6,7 +6,7 @@ import Carousel from "react-bootstrap/Carousel";
 import { assets } from '../../constants';
 
 // POS images
-const pos_previews = assets.ophirpos_previews;
+const ophirpos_previews = [...assets.ophirpos_previews];
 
 function POSPage() {
   const navigate = useNavigate();
@@ -63,10 +63,10 @@ function POSPage() {
         {/* Carousel */}
         <Card className="border-0 shadow-sm rounded-4 mb-4 pos-carousel-wrapper mx-auto">
           <Carousel fade interval={3000} pause="hover">
-            {pos_previews.map((slide, index) => (
+            {[...assets.ophirpos_previews].map((slide, index) => (
               <Carousel.Item key={index} className="pos-carousel-item">
                 <img
-                  src={slide.img}
+                  src={slide}
                   className="d-block pos-carousel-img mx-auto"
                   alt={`Slide ${index + 1}`}
                 />

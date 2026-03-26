@@ -2,24 +2,67 @@ section {
   scroll-margin-top: 76px;
 }
 
-.main-content {
-  padding-top: var(--bs-navbar-height, 80px);
-}
-
-
-/* NAVBAR */
+/* BASE STYLES */
 .nav-top {
   background: transparent;
-  transition: 0.3s ease;
+  transition: all 0.4s ease-in-out;
+  padding: 20px 0;
+}
+
+/* SCROLLED STATE */
+.nav-scrolled {
+  /* Green background with 75% opacity */
+  background: rgba(28, 248, 145, 0.75) !important;
+  /* Blur effect */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.nav-item button {
+  transition: color 0.3s ease, border-bottom 0.3s ease !important;
+}
+
+.nav-scrolled .navbar-brand {
+  color: #ffffff !important; 
+}
+
+/* MOBILE VIEW ADJUSTMENTS */
+@media (max-width: 768px) {
+  /* The mobile menu container */
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 15px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Force text to green in mobile even when not scrolled */
+  .mobile-text-green {
+    color: #5bb450 !important;
+  }
+
+  .nav-item button {
+    margin-bottom: 10px;
+    border-bottom: none !important; 
+  }
+}
+
+.btn {
+  transition: all 0.3s ease-in-out !important;
+}
+  
+  .navbar-nav .nav-item button {
+    color: white !important;
+    margin-bottom: 10px;
 }
 
 .navbar-brand {
   font-style: oblique;
-}
-
-.nav-scrolled {
-  background: #048a39;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.18);
 }
 
 .logo-img {
@@ -35,7 +78,7 @@ section {
 }
 
 .navbar-nav .nav-link {
-  color: #fff !important;
+  /* color: #fff !important; */
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.5px;
   font-size: 15px;
@@ -91,7 +134,7 @@ section {
     transform: translateX(-50%);
     width: 90%;
     max-width: 420px;
-    background: #03b249;
+    background: #5bb450;
     padding: 24px 0;
     border-radius: 16px;
     text-align: center;
@@ -863,4 +906,77 @@ section {
   transform: translateY(-10px); /* Lifts the card up */
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; /* Makes shadow deeper */
   border-color: #5bb450 !important; /* Optional: highlights the border on hover */
+}
+
+
+/* Container styling */
+.typing-banner-container {
+  background: white;
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Hover effect for the whole part */
+.typing-banner-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+  border-color: #0d6efd; /* Changes border to primary color on hover */
+}
+
+/* The Typing Wrapper */
+.typing-wrapper {
+  display: inline-block;
+}
+
+.typing-text {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid #0d6efd; /* The Typing Cursor */
+  width: 0;
+  animation: 
+    typing 5s steps(40, end) infinite,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Typing Effect Keyframes */
+@keyframes typing {
+  0% { width: 0 }
+  50% { width: 100% }   /* Text fully typed by middle of animation */
+  90% { width: 100% }   /* Stay visible for a moment */
+  100% { width: 0 }     /* Reset to start over */
+}
+
+/* Cursor Blink Keyframes */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #0d6efd }
+}
+
+/* Ensure it looks good on mobile */
+@media (max-width: 768px) {
+  .typing-text {
+    font-size: 1rem;
+    white-space: normal; /* Wrap text on mobile if it's too long */
+    animation: none;     /* Disable typing animation on mobile for better UX */
+    width: 100%;
+    border-right: none;
+  }
+}
+
+
+
+/* Smoothly scale the badge on hover */
+.transition-all:hover {
+  transform: translateY(-2px);
+  shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
+  background-color: #f8fff9 !important; /* Very light green tint */
+}
+
+/* For the minimalist link underline */
+.hover-border-success:hover {
+  border-color: #198754 !important; /* Bootstrap success color */
+  transition: border-color 0.3s ease;
 }
