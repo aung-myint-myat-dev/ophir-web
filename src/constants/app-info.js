@@ -11,7 +11,7 @@ export const ROUTES = {
   HOME: "/",
   ABOUT: "/about",
   CONTACT: "/contact",
-  STAR_GRADE: "/star-grade",
+  STAR_GRADE: "/saya-zaw",
   POS: "/pos-page",
 };
 

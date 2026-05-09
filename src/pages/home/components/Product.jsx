@@ -14,7 +14,6 @@ const item6 = assets.zogenealogy_logo;
 const item7 = assets.call2clean_logo;
 
 function Product() {
-
   const items = [
     {
       img: item1,
@@ -33,7 +32,7 @@ function Product() {
     {
       img: item2,
       title: "Saya Zaw (App)",
-      links: [{ label: "View More", url: "#product2" }],
+      links: [{ label: "View More", url: "/saya-zaw" }],
     },
     {
       img: item3,
@@ -49,11 +48,11 @@ function Product() {
       links: [{ label: "View More", url: "/#star-grade" }],
     },
 
-    {
-      img: item1,
-      title: "Car Business Management",
-      links: [{ label: "View More", url: "https://lovecarbusiness.com/" }],
-    },
+    // {
+    //   img: item1,
+    //   title: "Car Business Management",
+    //   links: [{ label: "View More", url: "https://lovecarbusiness.com/" }],
+    // },
     {
       img: item6,
       title: "Zo Genealogy",
@@ -63,7 +62,7 @@ function Product() {
       img: item7,
       title: "Call2Clean Janitorial",
       links: [
-        { label: "View More", url: "https://www.call2cleanservices.com" },
+        { label: "View More", url: "https://www.call2cleanservices.com/" },
       ],
     },
     {
@@ -82,11 +81,9 @@ function Product() {
     >
       <section id="project">
         <Container>
-          <div className="d-flex justify-content-between align-items-end mb-5">
             <div>
-              <h2 className="fw-bold display-5">Our Projects</h2>
+              <h2 className="fw-bold display-5 text-center mb-5">Our Projects</h2>
             </div>
-          </div>
 
           <Row className="g-4">
             {items.map((item, index) => (
@@ -123,24 +120,15 @@ function Product() {
                           .toLowerCase()
                           .includes("view");
 
-                        return (
-                          <Link
-                            key={idx}
-                            {...(isExternal
-                              ? {
-                                  as: "a",
-                                  href: linkItem.url,
-                                  target: "_blank",
-                                  rel: "noopener noreferrer",
-                                }
-                              : { to: linkItem.url })}
-                            className={`text-decoration-none d-inline-flex align-items-center fw-bold ${
-                              item.disabled
-                                ? "pe-none opacity-50"
-                                : "text-primary text-underline"
-                            }`}
-                            style={{ fontSize: "0.85rem", gap: "4px" }}
-                          >
+                        // Common Class names
+                        const linkClass = `text-decoration-none d-inline-flex align-items-center fw-bold ${
+                          item.disabled
+                            ? "pe-none opacity-50"
+                            : "text-primary text-decoration-underline"
+                        }`;
+
+                        const content = (
+                          <>
                             {linkItem.label}
                             {isViewMore && (
                               <MdKeyboardDoubleArrowRight
@@ -153,6 +141,32 @@ function Product() {
                                 style={{ fontSize: "0.7rem" }}
                               ></i>
                             )}
+                          </>
+                        );
+
+                        if (isExternal) {
+                          return (
+                            <a
+                              key={idx}
+                              href={linkItem.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className={linkClass}
+                              style={{ fontSize: "0.85rem", gap: "4px" }}
+                            >
+                              {content}
+                            </a>
+                          );
+                        }
+
+                        return (
+                          <Link
+                            key={idx}
+                            to={linkItem.url}
+                            className={linkClass}
+                            style={{ fontSize: "0.85rem", gap: "4px" }}
+                          >
+                            {content}
                           </Link>
                         );
                       })}

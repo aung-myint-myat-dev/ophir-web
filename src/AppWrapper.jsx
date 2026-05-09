@@ -6,7 +6,7 @@ import { AppRoot, AppNavBar } from "./components";
 export default function AppWrapper() {
   const location = useLocation();
 
-  const hideNavBarPaths = ["/star-grade", "/pos-page"];
+  const hideNavBarPaths = ["/saya-zaw", "/pos-page"];
   const showNavBar = !hideNavBarPaths.includes(location.pathname);
 
   return (

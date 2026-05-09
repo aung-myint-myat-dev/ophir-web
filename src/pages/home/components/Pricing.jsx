@@ -1,5 +1,4 @@
-import { FaCheck } from "react-icons/fa6";
-import { FaXmark } from "react-icons/fa6";
+import { FaCheck, FaXmark } from "react-icons/fa6";
 
 export default function Pricing() {
   return (
@@ -12,11 +11,11 @@ export default function Pricing() {
             From high-converting landing pages to complex enterprise platforms,
             select the perfect architecture for your digital presence.
           </p>
-          <div className="mt-3">
+          {/* <div className="mt-3">
             <span className="badge border text-dark px-3 py-2 rounded-pill shadow-sm">
               • Hosting fees are provided by the customer •
             </span>
-          </div>
+          </div> */}
         </div>
 
         <div className="row g-4 justify-content-center">
@@ -28,7 +27,7 @@ export default function Pricing() {
                   className="badge mb-3 px-3 py-2"
                   style={{ backgroundColor: "#5bb450" }}
                 >
-                  Pro
+                  Basic
                 </span>
                 <p className="small text-muted">
                   Perfect for startups. A high-converting
@@ -37,14 +36,13 @@ export default function Pricing() {
                 <h2 className="fw-bold mb-4">400,000 MMK</h2>
                 <hr className="text-muted opacity-25" />
                 <ul className="list-unstyled mt-4">
-                  <PricingFeature text="Single Page Architecture" />
+                  <PricingFeature text="Single Page (Business Info)" />
                   <PricingFeature text="Mobile-Responsive Design" />
                   <PricingFeature text="Pre-designed Layout" />
                   <PricingFeature text="Basic Contact Form" />
                   <PricingFeature text="Standard Deployment" />
-                  <PricingFeature text="Multi-Page Layout" isMissing />
-                  <PricingFeature text="CRM Development" isMissing />
-                  <PricingFeature text="CMS Development" isMissing />
+                  <PricingFeature text="One Year Maintenance" />
+                  <PricingFeature text="Up to 2 Time Info Updates" />
                 </ul>
               </div>
             </div>
@@ -61,7 +59,7 @@ export default function Pricing() {
                   className="badge mb-3 px-3 py-2"
                   style={{ backgroundColor: "#5bb450" }}
                 >
-                  Pro Plus
+                  Pro 
                 </span>
                 <p className="small text-muted">
                   Ideal for growing businesses. A comprehensive
@@ -76,9 +74,8 @@ export default function Pricing() {
                   <PricingFeature text="Blog/News Integration" />
                   <PricingFeature text="Email Integration" />
                   <PricingFeature text="Contact Form with Email" />
-                  <PricingFeature text="Multi-Page Layout" isMissing />
-                  <PricingFeature text="CRM Development" isMissing />
-                  <PricingFeature text="CMS Development" isMissing />
+                  <PricingFeature text="One Year Maintenance" />
+                  <PricingFeature text="Up to 2 Time Info Updates" />
                 </ul>
               </div>
             </div>
@@ -97,7 +94,7 @@ export default function Pricing() {
                   className="badge bg-white mb-3 px-3 py-2 border"
                   style={{ color: "#5bb450" }}
                 >
-                  Custom
+                  Customize
                 </span>
                 <p className="small text-muted">
                   For complex requirements. <strong>Full customization </strong>
@@ -113,6 +110,8 @@ export default function Pricing() {
                   <PricingFeature text="CRM Development" />
                   <PricingFeature text="CMS Development" />
                   <PricingFeature text="Priority Maintenance" />
+                  <PricingFeature text="One Year Maintenance" />
+                  <PricingFeature text="Up to 2 Time Info Updates" />
                 </ul>
               </div>
             </div>

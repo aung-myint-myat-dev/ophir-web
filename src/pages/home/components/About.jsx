@@ -8,7 +8,7 @@ import { assets } from "../../../constants";
 // const project_logos = assets.project_logos;
 const images = [
   ...assets.lovecar_previews,
-  // ...assets.stargrade_previews,
+  ...assets.sayazaw_previews,
   ...assets.foodburma_previews,
   ...assets.frame,
 ];
@@ -44,7 +44,7 @@ function AppAbout() {
               >
                 Ophir IT Solutions is a branch of our mother company{" "}
                 <strong className="text-dark">
-                  Call2Clean Janitorial Service Company Limited
+                  Call2Clean Janitorial Services Company Limited
                 </strong>
                 . We are dedicated to providing quality IT services that support
                 and enhance SME business owners.
@@ -108,7 +108,7 @@ function AppAbout() {
                   >
                     {[
                       ...assets.lovecar_previews,
-                      // ...assets.stargrade_previews,
+                      ...assets.sayazaw_previews,
                       ...assets.foodburma_previews,
                     ].map((img, index) => (
                       <Carousel.Item key={index} className="h-100">

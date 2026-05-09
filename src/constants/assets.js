@@ -15,7 +15,16 @@ import slider_webdevelopment from "../assets/images/slider-images/webdevelopment
 // FoodBurma Previews
 import foodburma_preview_1 from "../assets/images/foodburma-previews/fb-1.png";
 import foodburma_preview_2 from "../assets/images/foodburma-previews/fb-2.png";
-import foodburma_preview_3 from "../assets/images/foodburma-previews/fb-4.png";
+
+// SayazawMaths Previews
+import sayazaw_preview_1 from "../assets/images/saya-previews/sayarzaw.jpg"
+
+// SayazawMaths DB
+import sayazaw_db_1 from "../assets/images/sayazaw-dashboard/sayazaw_db_1.jpg"
+import sayazaw_db_2 from "../assets/images/sayazaw-dashboard/sayazaw_db_2.jpg"
+import sayazaw_db_3 from "../assets/images/sayazaw-dashboard/sayazaw_db_3.jpg"
+import sayazaw_db_4 from "../assets/images/sayazaw-dashboard/sayazaw_db_4.jpg"
+import sayazaw_db_5 from "../assets/images/sayazaw-dashboard/sayazaw_db_5.jpg"
 
 //phone frame
 import iphone_frame from "../assets/images/iphone-frame.png"
@@ -25,7 +34,6 @@ import lovecar_preview_1 from "../assets/images/lovecar-previews/lovecar-cbm.png
 import lovecar_preview_2 from "../assets/images/lovecar-previews/lovecar-coin.png";
 import lovecar_preview_3 from "../assets/images/lovecar-previews/lovecar-discount.png";
 import lovecar_preview_4 from "../assets/images/lovecar-previews/lovecar-homepage.png";
-// import lovecar_preview_5 from "../assets/images/lovecar-previews/lovecar-newday.png";
 
 // OphirPOS Previews
 import ophirpos_preview_1 from "../assets/images/ophirpos-previews/1.png";
@@ -54,6 +62,7 @@ import icon1 from "../assets/images/icon1.png"
 import icon2 from "../assets/images/icon2.png"
 import icon3 from "../assets/images/icon3.png"
 import icon4 from "../assets/images/icon4.png"
+import icon5 from "../assets/images/cleaning.png"
 
 // ==================
 // Arrays & Exports
@@ -66,7 +75,11 @@ export const slider_images = [
   slider_webdevelopment,
 ];
 
-export const foodburma_previews = [foodburma_preview_1,foodburma_preview_2,foodburma_preview_3];
+export const foodburma_previews = [foodburma_preview_1,foodburma_preview_2];
+
+export const sayazaw_previews = [sayazaw_preview_1];
+
+export const sayazaw_dashboard = [sayazaw_db_1, sayazaw_db_2, sayazaw_db_3, sayazaw_db_4, sayazaw_db_5];
 
 export const frame = [iphone_frame];
 
@@ -120,3 +133,5 @@ export const icon = [
   icon3,
   icon4
 ]
+
+export const cleaning_icon = [icon5]

@@ -12,10 +12,10 @@ export default function HomeSlider() {
    useEffect(() => {
     const carouselElement = document.getElementById("carouselExampleFade");
     new bootstrap.Carousel(carouselElement, {
-      interval: 5000,   // 5 seconds per slide
-      ride: "carousel", // auto-start
-      wrap: true,       // loop continuously
-      pause: false      // don't stop on hover
+      interval: 5000,  
+      ride: "carousel", 
+      wrap: true,      
+      pause: false    
     });
   }, []);
 

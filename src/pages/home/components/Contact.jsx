@@ -68,7 +68,7 @@ export default function ContactPage() {
                   </div>
                 </div>
 
-                <div className="pt-3 text-center animated-icon">
+                <div className="pt-3 animated-icon">
                   <a
                     href="https://docs.google.com/forms/d/e/1FAIpQLScOdgdWC-QP8n_NwHSu_Ir35swQ8NbtNk54LD7iffNdcOdSFA/viewform"
                     target="_blank"
@@ -76,7 +76,7 @@ export default function ContactPage() {
                     className="d-inline-flex align-items-center text-decoration-none fw-bold p-0 transition-link"
                     style={{ color: "#5bb450" }}
                   >
-                    <span className="me-2">Fill out our Quotation form</span>
+                    <span className="me-2">Request Free Quotation HERE</span>
                     <FaExternalLinkAlt size={12} />
                   </a>
                 </div>
@@ -103,36 +103,9 @@ export default function ContactPage() {
           </Col>
         </Row>
       </Container>
-      <div className="d-flex justify-content-center mt-3">
-            <a
-              href="https://www.call2cleanservices.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-decoration-none shadow-sm border border-success rounded-pill px-2 py-1 bg-white d-inline-flex align-items-center transition-all"
-              style={{ transition: "all 0.3s ease" }}
-            >
-              <div
-                className="me-2 bg-success rounded-circle d-flex align-items-center justify-content-center"
-                style={{ width: "10px", height: "10px" }}
-              >
-                <span className="visually-hidden">Active</span>
-              </div>
-              <span className="fs-6 fw-bold text-success">
-                For your Cleaning Service Needs CHECK HERE
-                <i className="bi bi-arrow-right-short ms-1"></i>
-              </span>
-            </a>
-          </div>
-      {/* Optional CSS for the link hover */}
-      <style>{`
-        .transition-link {
-          transition: transform 0.2s ease;
-        }
-        .transition-link:hover {
-          transform: translateX(5px);
-          opacity: 0.8;
-        }
-      `}</style>
+      <div className="d-flex justify-content-center mt-3"></div>
+
+     
     </section>
   );
 }
