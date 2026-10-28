@@ -1,12 +1,11 @@
 import { useLocation } from "react-router-dom";
-
-import { AppRoutes } from "./routes";
 import { AppRoot, AppNavBar } from "./components";
+import AppRoutes from "./routes/AppRoutes";
 
 export default function AppWrapper() {
   const location = useLocation();
 
-  const hideNavBarPaths = ["/saya-zaw", "/pos-page"];
+  const hideNavBarPaths = ["/products/*", "/projects/*"];
   const showNavBar = !hideNavBarPaths.includes(location.pathname);
 
   return (
@@ -14,7 +13,6 @@ export default function AppWrapper() {
       {showNavBar && <AppNavBar />}
 
       <AppRoutes />
-
       <AppRoot />
     </div>
   );

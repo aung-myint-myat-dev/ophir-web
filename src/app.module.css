@@ -25,14 +25,20 @@ section {
 }
 
 .nav-scrolled .navbar-brand {
-  color: #ffffff !important; 
+  color: #ffffff !important;
+}
+
+.page-container-padding {
+  padding: 8rem 0;
 }
 
 /* MOBILE VIEW ADJUSTMENTS */
 @media (max-width: 768px) {
+
   /* The mobile menu container */
   .navbar-collapse {
-    background: rgba(255, 255, 255, 0.85); /* White with 85% opacity */
+    background: rgba(255, 255, 255, 0.85);
+    /* White with 85% opacity */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 15px;
@@ -48,17 +54,17 @@ section {
 
   .nav-item button {
     margin-bottom: 10px;
-    border-bottom: none !important; 
+    border-bottom: none !important;
   }
 }
 
 .btn {
   transition: all 0.3s ease-in-out !important;
 }
-  
-  .navbar-nav .nav-item button {
-    color: white !important;
-    margin-bottom: 10px;
+
+.navbar-nav .nav-item button {
+  color: white !important;
+  margin-bottom: 10px;
 }
 
 .navbar-brand {
@@ -107,6 +113,11 @@ section {
 }
 
 @media (min-width: 769px) {
+
+  /* Page Padding */
+  .page-container-padding {
+    padding: 4rem 0;
+  }
 
   .navbar-nav .nav-link::after {
     content: "";
@@ -520,6 +531,7 @@ section {
   .service-card h4 {
     font-size: 21px;
   }
+
   .service-card p {
     font-size: 15px;
   }
@@ -529,6 +541,7 @@ section {
   .service-card h4 {
     font-size: 20px;
   }
+
   .service-card p {
     font-size: 14px;
   }
@@ -550,7 +563,6 @@ section {
 
 /* =================================================== */
 /* Product Page */
-
 .product-page-bg {
   background: linear-gradient(120deg, #d4f8e8 0%, #c7f4dd 25%, #b1eed1 55%, #9ee8c7 100%);
   padding-bottom: 60px;
@@ -903,9 +915,12 @@ section {
 }
 
 .pricing-card:hover {
-  transform: translateY(-10px); /* Lifts the card up */
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; /* Makes shadow deeper */
-  border-color: #5bb450 !important; /* Optional: highlights the border on hover */
+  transform: translateY(-10px);
+  /* Lifts the card up */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  /* Makes shadow deeper */
+  border-color: #5bb450 !important;
+  /* Optional: highlights the border on hover */
 }
 
 
@@ -921,8 +936,9 @@ section {
 /* Hover effect for the whole part */
 .typing-banner-container:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
-  border-color: #0d6efd; /* Changes border to primary color on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+  border-color: #0d6efd;
+  /* Changes border to primary color on hover */
 }
 
 /* The Typing Wrapper */
@@ -934,33 +950,58 @@ section {
   display: block;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 3px solid #0d6efd; /* The Typing Cursor */
+  border-right: 3px solid #0d6efd;
+  /* The Typing Cursor */
   width: 0;
-  animation: 
+  animation:
     typing 5s steps(40, end) infinite,
     blink-caret 0.75s step-end infinite;
 }
 
 /* Typing Effect Keyframes */
 @keyframes typing {
-  0% { width: 0 }
-  50% { width: 100% }   /* Text fully typed by middle of animation */
-  90% { width: 100% }   /* Stay visible for a moment */
-  100% { width: 0 }     /* Reset to start over */
+  0% {
+    width: 0
+  }
+
+  50% {
+    width: 100%
+  }
+
+  /* Text fully typed by middle of animation */
+  90% {
+    width: 100%
+  }
+
+  /* Stay visible for a moment */
+  100% {
+    width: 0
+  }
+
+  /* Reset to start over */
 }
 
 /* Cursor Blink Keyframes */
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #0d6efd }
+
+  from,
+  to {
+    border-color: transparent
+  }
+
+  50% {
+    border-color: #0d6efd
+  }
 }
 
 /* Ensure it looks good on mobile */
 @media (max-width: 768px) {
   .typing-text {
     font-size: 1rem;
-    white-space: normal; /* Wrap text on mobile if it's too long */
-    animation: none;     /* Disable typing animation on mobile for better UX */
+    white-space: normal;
+    /* Wrap text on mobile if it's too long */
+    animation: none;
+    /* Disable typing animation on mobile for better UX */
     width: 100%;
     border-right: none;
   }
@@ -971,12 +1012,86 @@ section {
 /* Smoothly scale the badge on hover */
 .transition-all:hover {
   transform: translateY(-2px);
-  shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
-  background-color: #f8fff9 !important; /* Very light green tint */
+  shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+  background-color: #f8fff9 !important;
+  /* Very light green tint */
 }
 
 /* For the minimalist link underline */
 .hover-border-success:hover {
-  border-color: #198754 !important; /* Bootstrap success color */
+  border-color: #198754 !important;
+  /* Bootstrap success color */
   transition: border-color 0.3s ease;
+}
+
+.product-image-carousel {
+  width: 100%;
+  max-width: 520px;
+}
+
+/* Image frame */
+.product-image-wrapper {
+  width: 100%;
+  height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+  border: 3px solid #dee7e1;
+  border-radius: 24px;
+  background-color: #f8faf9;
+  overflow: hidden;
+}
+
+/* Screenshot */
+.product-screenshot {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 14px;
+}
+
+/* Carousel indicators */
+.product-image-carousel .carousel-indicators {
+  margin-bottom: -28px;
+}
+
+.product-image-carousel .carousel-indicators [data-bs-target] {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background-color: #198754;
+}
+
+/* Tablet */
+@media (max-width: 991.98px) {
+  .product-image-carousel {
+    max-width: 480px;
+    margin-top: 20px;
+  }
+
+  .product-image-wrapper {
+    height: 440px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+  .product-image-carousel {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+
+  .product-image-wrapper {
+    height: 360px;
+    padding: 10px;
+    border-width: 2px;
+    border-radius: 20px;
+  }
+
+  .product-screenshot {
+    border-radius: 12px;
+  }
 }

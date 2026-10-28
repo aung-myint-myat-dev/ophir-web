@@ -15,6 +15,9 @@ import slider_webdevelopment from "../assets/images/slider-images/webdevelopment
 // FoodBurma Previews
 import foodburma_preview_1 from "../assets/images/foodburma-previews/fb-1.png";
 import foodburma_preview_2 from "../assets/images/foodburma-previews/fb-2.png";
+import foodburma_preview_ios_1 from "../assets/images/foodburma-previews/fb-1-portrait.png"
+import foodburma_preview_ios_2 from "../assets/images/foodburma-previews/fb-2-portrait.png"
+import foodburma_preview_ios_3 from "../assets/images/foodburma-previews/fb-4-portrait.png"
 
 // SayazawMaths Previews
 import sayazaw_preview_1 from "../assets/images/saya-previews/sayarzaw.jpg"
@@ -30,10 +33,10 @@ import sayazaw_db_5 from "../assets/images/sayazaw-dashboard/sayazaw_db_5.jpg"
 import iphone_frame from "../assets/images/iphone-frame.png"
 
 // LoveCar Previews
-import lovecar_preview_1 from "../assets/images/lovecar-previews/lovecar-cbm.png";
-import lovecar_preview_2 from "../assets/images/lovecar-previews/lovecar-coin.png";
-import lovecar_preview_3 from "../assets/images/lovecar-previews/lovecar-discount.png";
-import lovecar_preview_4 from "../assets/images/lovecar-previews/lovecar-homepage.png";
+import lovecar_preview_ios_1 from "../assets/images/lovecar-previews/lovecar-cbm-portrait.png";
+import lovecar_preview_ios_2 from "../assets/images/lovecar-previews/lovecar-coin-portrait.png";
+import lovecar_preview_ios_3 from "../assets/images/lovecar-previews/lovecar-discount-portrait.png";
+import lovecar_preview_ios_4 from "../assets/images/lovecar-previews/lovecar-homepage-portrait.png";
 
 // OphirPOS Previews
 import ophirpos_preview_1 from "../assets/images/ophirpos-previews/1.png";
@@ -45,17 +48,26 @@ import ophirpos_preview_6 from "../assets/images/ophirpos-previews/6.png";
 import ophirpos_preview_7 from "../assets/images/ophirpos-previews/7.png";
 import ophirpos_preview_8 from "../assets/images/ophirpos-previews/8.png";
 
+// zogenealogy previews
+import zogenealogy_2 from "../assets/images/zogenealogy_previews/zogenealogy_preview_2.png";
+import zogenealogy_3 from "../assets/images/zogenealogy_previews/zogenealogy_preview_3.png";
+import zogenealogy_4 from "../assets/images/zogenealogy_previews/zogenealogy_preview_4.png";
+import zogenealogy_5 from "../assets/images/zogenealogy_previews/zogenealogy_preview_5.png";
+
 // StarGrade Previews
 import stargrade_preview_1 from "../assets/images/stargrade-previews/1.png";
 
 // Project Logos
-import call2clean_logo_img from "../assets/images/project-logos/call2clean.jpg";
-import foodburma_logo_img from "../assets/images/project-logos/foodburma.webp";
-import lovecar_logo_img from "../assets/images/project-logos/lovecar.webp";
-import ophirpos_logo_img from "../assets/images/project-logos/ophirpos.jpg";
-import sayazawmaths_logo_img from "../assets/images/project-logos/sayazawmaths.png";
-import stargrade_logo_img from "../assets/images/project-logos/stargrade.webp";
-import zogenealogy_logo_img from "../assets/images/project-logos/zogenealogy.png";
+import call2clean_logo_img from "../assets/images/project_logos_png_version/call2clean.jpg";
+import foodburma_logo_img from "../assets/images/project_logos_png_version/food_burma.png";
+import lovecar_logo_img from "../assets/images/project_logos_png_version/love_car.png";
+import ophirpos_logo_img from "../assets/images/project_logos_png_version/ophir_pos.png";
+import sayazawmaths_logo_img from "../assets/images/project_logos_png_version/sayazawmaths.png";
+import stargrade_logo_img from "../assets/images/project_logos_png_version/star_grade.png";
+import zogenealogy_logo_img from "../assets/images/project_logos_png_version/zogenealogy.png";
+import ophir_school_management_logo_img from "../assets/images/project_logos_png_version/ophir_school_management_logo.png";
+import cbm_logo_img from "../assets/images/project_logos_png_version/cbm_logo.png";
+import shop_pro_logo_img from "../assets/images/project_logos_png_version/shop_pro.png";
 
 //icon pngs
 import icon1 from "../assets/images/icon1.png"
@@ -75,7 +87,12 @@ export const slider_images = [
   slider_webdevelopment,
 ];
 
-export const foodburma_previews = [foodburma_preview_1,foodburma_preview_2];
+export const foodburma_previews = [
+  // foodburma_preview_1,foodburma_preview_2
+  foodburma_preview_ios_1,
+  foodburma_preview_ios_2,
+  foodburma_preview_ios_3,
+];
 
 export const sayazaw_previews = [sayazaw_preview_1];
 
@@ -84,10 +101,10 @@ export const sayazaw_dashboard = [sayazaw_db_1, sayazaw_db_2, sayazaw_db_3, saya
 export const frame = [iphone_frame];
 
 export const lovecar_previews = [
-  lovecar_preview_1,
-  lovecar_preview_2,
-  lovecar_preview_3,
-  lovecar_preview_4,
+  lovecar_preview_ios_1,
+  lovecar_preview_ios_2,
+  lovecar_preview_ios_3,
+  lovecar_preview_ios_4,
   // lovecar_preview_5,
 ];
 
@@ -103,6 +120,13 @@ export const ophirpos_previews = [
 ];
 
 export const stargrade_previews = [stargrade_preview_1];
+
+export const zogenealogy_previews = [
+  zogenealogy_2,
+  zogenealogy_3,
+  zogenealogy_4,
+  zogenealogy_5,
+]
 
 export const project_logos = [
   call2clean_logo_img,
@@ -125,6 +149,9 @@ export {
   sayazawmaths_logo_img as sayazawmaths_logo,
   stargrade_logo_img as stargrade_logo,
   zogenealogy_logo_img as zogenealogy_logo,
+  ophir_school_management_logo_img as ophir_school_management_logo,
+  cbm_logo_img as cbm_logo,
+  shop_pro_logo_img as shop_pro_logo,
 };
 
 export const icon = [

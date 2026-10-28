@@ -5,11 +5,14 @@ import './assets/fonts/fonts.css';
 import { BrowserRouter } from "react-router-dom";
 
 import "./app.module.css";
-import AppWrapper  from "./AppWrapper";
+import AppWrapper from "./AppWrapper";
+import ScrollToTop from "./utils/ScrollToTop";
 
 export default function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
+
       <AppWrapper />
     </BrowserRouter>
   );

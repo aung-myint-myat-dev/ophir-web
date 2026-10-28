@@ -78,16 +78,16 @@ function AppAbout() {
                 style={{ width: "200px", zIndex: 1 }}
               >
                 {/* THE IPHONE FRAME */}
-                <img
+                {/* <img
                   src={assets.frame}
                   alt="Phone Frame"
                   className="img-fluid position-relative"
                   style={{ zIndex: 2, pointerEvents: "none" }}
-                />
+                /> */}
 
                 {/* THE SCREEN CONTENT (CAROUSEL) */}
                 <div
-                  className="position-absolute"
+                  className=""
                   style={{
                     top: "2%", 
                     left: "5%", 
@@ -108,7 +108,6 @@ function AppAbout() {
                   >
                     {[
                       ...assets.lovecar_previews,
-                      ...assets.sayazaw_previews,
                       ...assets.foodburma_previews,
                     ].map((img, index) => (
                       <Carousel.Item key={index} className="h-100">

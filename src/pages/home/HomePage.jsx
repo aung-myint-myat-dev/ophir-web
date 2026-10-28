@@ -7,10 +7,10 @@ export default function HomePage() {
     <>
       <home.HomeSlider />
       <home.About />
-      <home.Service />
+      {/* <home.Service /> */}
       <home.Product />
-      <home.Pricing />
-      <home.Contact />
+      {/* <home.Pricing /> */}
+      {/* <home.Contact /> */}
     </>
   );
 }
