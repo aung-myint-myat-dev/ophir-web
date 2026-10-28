@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { assets } from "../constants";
-import { products, projects } from "../pages/products/data/products";
+import { products } from "../database/index";
 import "bootstrap/js/dist/dropdown"
+import { FaX } from "react-icons/fa6";
+import { FaBars } from "react-icons/fa";
 
 const img1 = assets.APP_LOGO;
 
@@ -80,13 +82,11 @@ export default function AppNavbar() {
             aria-expanded={isOpen}
             aria-label="Toggle navigation"
           >
-            <span
-              className="navbar-toggler-icon"
-              style={{
-                filter:
-                  "invert(35%) sepia(85%) saturate(450%) hue-rotate(80deg) brightness(95%) contrast(90%)",
-              }}
-            ></span>
+            {isOpen ? (
+              <FaX className={isClearBackground ? (scrolled ? 'text-success' : 'text-white') : 'text-success'} />
+            ) : (
+              <FaBars className={isClearBackground ? (scrolled ? 'text-success' : 'text-white') : 'text-success'} />
+            )}
           </button>
 
           {/* MENU ITEMS */}
@@ -146,8 +146,7 @@ export default function AppNavbar() {
                         onClick={closeNavbar}
                         className={`btn border-0 bg-transparent fw-bold position-relative px-0 mx-2 ${isClearBackground && !scrolled
                           ? "text-white"
-                          : "text-success"
-                          }`}
+                          : "text-success"}`}
                         style={{
                           fontSize: "0.85rem",
                           textTransform: "uppercase",
@@ -156,17 +155,15 @@ export default function AppNavbar() {
                         }}
                       >
                         {link.label}
-                        <span
+                        <span className={isClearBackground && !scrolled
+                          ? "bg-white"
+                          : "bg-success"}
                           style={{
                             position: "absolute",
                             bottom: "-2px",
                             left: "0",
                             width: isActive ? "100%" : "0%",
                             height: "3px",
-                            backgroundColor:
-                              isClearBackground && !scrolled
-                                ? "#ffffff"
-                                : "#198754",
                             transition: "width 0.3s ease-in-out",
                             borderRadius: "10px",
                           }}

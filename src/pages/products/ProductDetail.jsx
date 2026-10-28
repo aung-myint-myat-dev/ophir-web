@@ -1,21 +1,50 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { Container, Button, Row, Col, Carousel, Card } from "react-bootstrap";
 import {
-  FaCheck,
   FaArrowLeft,
 } from "react-icons/fa";
-import { products } from "./data/products";
-import { DynamicFaIcon } from "../../components/DynamicFaIcon";
+import { products } from "../../database/index"
 import RelatedProjects from "./components/RelatedProducts";
+import ProductFeature from "./components/ProductFeature";
+import ProductSuitable from "./components/ProductSuitable";
 
 export default function ProductDetail() {
+  const [product, setProduct] = useState(null)
+  const [loading, setLoading] = useState(false)
   const navigate = useNavigate();
   const { slug } = useParams();
-  const product = products.find(
-    (p) => p.slug === slug || p.name.toLowerCase().replace(/\s+/g, '-') === slug
-  );
 
+  useEffect(() => {
+    setLoading(true)
+    setProduct(null)
+
+    const timer = setTimeout(() => {
+      const foundProduct = products.find(
+        (p) =>
+          p.slug === slug && p.is_active === true
+      );
+
+      setProduct(foundProduct)
+      setLoading(false)
+    }, 500)
+
+    return () => clearTimeout(timer);
+  }, [slug])
+
+  // LOADING PRODUCT
+  if (loading) {
+    return (
+      <div style={{
+        height: "100vh",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}>Loading...</div>
+    )
+  }
+
+  // PRODUCT NOT FOUND
   if (!product) {
     return (
       <Container className="text-center py-5" style={{ height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -46,7 +75,6 @@ export default function ProductDetail() {
         <section>
           <Container>
             <Row className="align-item-center g-5 px-lg-5">
-
               {/* LEFT SIDE - APP INFORMATION */}
               <Col lg={6} md={12} className=" max-h-max">
                 <div className="d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
@@ -71,8 +99,6 @@ export default function ProductDetail() {
                   <p className="text-secondary mb-4" style={{ maxWidth: "500px" }}>
                     {product.description}
                   </p>
-
-                  {/* <p className="fs-6 text-secondary"><FaLink/> Links</p> */}
 
                   {/* DOWNLOAD LINKS */}
                   <div className="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
@@ -131,20 +157,21 @@ export default function ProductDetail() {
           </Container>
         </section>
 
-        {/* ================= ROW 1: COMPACT KEY FEATURES ================= */}
         {/* BENEFITS SECTION */}
         <section className="bg-white mt-5 p-4 p-md-5 rounded-4 shadow-sm border mb-4">
-          <div className="mb-4 pb-3">
+          <div className="mb-4">
             <h3 className="fw-bold text-dark mb-2" style={{ fontSize: "1.75rem" }}>
               Benefits
             </h3>
           </div>
-          <p>{product.benefits}</p>
+          <p style={{
+            textAlign: "justify"
+          }}>{product.benefits}</p>
         </section>
 
         {/* SUTABLE FOR SECTION */}
         <section className="bg-white p-4 p-md-5 rounded-4 shadow-sm border mb-4">
-          <div className="mb-5">
+          <div className="mb-4">
             <h3
               className="fw-bold text-dark mb-2"
               style={{ fontSize: "1.75rem" }}
@@ -154,50 +181,21 @@ export default function ProductDetail() {
           </div>
 
           <div className="d-flex flex-column gap-4">
-            {product?.for?.map((item) => (
-              <div key={item.id} className="d-flex align-items-start gap-3">
-                <div
-                  className="flex-shrink-0 d-flex align-items-center justify-content-center rounded-3"
-                  style={{
-                    width: "52px",
-                    height: "52px",
-                    backgroundColor: "#e8f5ee",
-                    color: "#198754",
-                    fontSize: "1.3rem",
-                  }}
-                >
-                  <DynamicFaIcon iconName={item.icon} />
-                </div>
-
-                <div>
-                  <h5
-                    className="fw-bold text-dark mb-1"
-                    style={{ fontSize: "1.15rem" }}
-                  >
-                    {item.label}
-                  </h5>
-
-                  <p
-                    className="text-secondary mb-0"
-                    style={{
-                      fontSize: "1rem",
-                      lineHeight: "1.8",
-                      maxWidth: "850px",
-                    }}
-                  >
-                    {item.description}
-                  </p>
-                </div>
-              </div>
+            {product?.for?.map((item, index) => (
+              <ProductSuitable
+                key={index}
+                iconName={item.icon}
+                label={item.label}
+                description={item.description} />
             ))}
           </div>
         </section>
 
         {/* KEY FEATURES SECTION */}
         <section className="mb-4">
-          <div className="bg-white rounded-4 border shadow-sm p-3 p-md-4">
+          <div className="bg-white rounded-4 border shadow-sm p-4 p-md-5">
             {/* HEADING */}
-            <div className="mb-3">
+            <div className="mb-4">
               <h4 className="fw-bold text-dark mb-1">Features</h4>
               <p className="text-secondary small mb-0">
                 Explore the key features and capabilities of this product.
@@ -209,47 +207,9 @@ export default function ProductDetail() {
               <Row className="g-3">
                 {product.features.map((feature, index) => (
                   <Col xs={12} sm={6} lg={4} key={index}>
-                    <div className="d-flex align-items-center h-100 p-2 rounded-2 ">
-                      {/* ICON */}
-                      <div
-                        className="d-flex align-items-center justify-content-center flex-shrink-0 rounded-2 me-3"
-                        style={{
-                          width: "28px",
-                          height: "28px",
-                          backgroundColor: "#ebf5fb",
-                        }}
-                      >
-                        <FaCheck
-                          style={{
-                            color: "#2980b9",
-                            fontSize: "11px",
-                          }}
-                        />
-                      </div>
-
-                      {/* CONTENT */}
-                      <div className="flex-grow-1">
-                        <h6
-                          className="fw-semibold text-dark mb-1"
-                          style={{
-                            fontSize: "0.9rem",
-                            lineHeight: "1.4",
-                          }}
-                        >
-                          {feature.title}
-                        </h6>
-
-                        <p
-                          className="text-secondary mb-0"
-                          style={{
-                            fontSize: "0.8rem",
-                            lineHeight: "1.6",
-                          }}
-                        >
-                          {feature.description}
-                        </p>
-                      </div>
-                    </div>
+                    <ProductFeature
+                      title={feature.title}
+                      description={feature.description} />
                   </Col>
                 ))}
               </Row>

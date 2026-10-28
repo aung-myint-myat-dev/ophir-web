@@ -1,4 +1,4 @@
-import { assets } from "../../../constants";
+import { assets } from "../constants";
 
 export const products = [
   // id: 1 - School Management System
@@ -247,7 +247,8 @@ export const products = [
         description: "descriiptoin",
         icon: "FaCar",
       }
-    ]
+    ],
+    is_active: true,
   },
   // id: 6 - Love Car Application
   {
@@ -291,5 +292,11 @@ export const products = [
     ],
     is_active: true,
   },
+];
 
+export const projects = [
+  ...products.map(({ name, logo_path }) => ({ name, logo_path })),
+  { name: "Start Grade Education", logo_path: assets.stargrade_logo },
+  { name: "Food Burma", logo_path: assets.foodburma_logo },
+  { name: "Sayar Zaw Math", logo_path: assets.sayazawmaths_logo }
 ];

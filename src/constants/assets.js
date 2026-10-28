@@ -13,8 +13,6 @@ import slider_posrestaurant from "../assets/images/slider-images/pos&restaurant.
 import slider_webdevelopment from "../assets/images/slider-images/webdevelopment.jpg";
 
 // FoodBurma Previews
-import foodburma_preview_1 from "../assets/images/foodburma-previews/fb-1.png";
-import foodburma_preview_2 from "../assets/images/foodburma-previews/fb-2.png";
 import foodburma_preview_ios_1 from "../assets/images/foodburma-previews/fb-1-portrait.png"
 import foodburma_preview_ios_2 from "../assets/images/foodburma-previews/fb-2-portrait.png"
 import foodburma_preview_ios_3 from "../assets/images/foodburma-previews/fb-4-portrait.png"

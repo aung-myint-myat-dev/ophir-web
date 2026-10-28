@@ -3,7 +3,7 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
 import ProjectCard from "./components/ProjectCard";
-import { projects } from "./data/projects";
+import { projects } from "../../database/index";
 
 function Projects() {
   return (
