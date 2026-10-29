@@ -8,6 +8,7 @@ import { products } from "../../database/index"
 import RelatedProjects from "./components/RelatedProducts";
 import ProductFeature from "./components/ProductFeature";
 import ProductSuitable from "./components/ProductSuitable";
+import Loading from "../../components/Loading";
 
 export default function ProductDetail() {
   const [product, setProduct] = useState(null)
@@ -34,14 +35,7 @@ export default function ProductDetail() {
 
   // LOADING PRODUCT
   if (loading) {
-    return (
-      <div style={{
-        height: "100vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-      }}>Loading...</div>
-    )
+    return <Loading />
   }
 
   // PRODUCT NOT FOUND
@@ -209,7 +203,8 @@ export default function ProductDetail() {
                   <Col xs={12} sm={6} lg={4} key={index}>
                     <ProductFeature
                       title={feature.title}
-                      description={feature.description} />
+                      description={feature.description}
+                      items={feature.items} />
                   </Col>
                 ))}
               </Row>

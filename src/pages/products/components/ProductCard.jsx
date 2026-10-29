@@ -39,7 +39,7 @@ export default function ProductCard({ product }) {
               <a
                 key={link.label}
                 href={link.url}
-                className="btn btn-outline-primary btn-sm rounded-pill px-3"
+                className="btn btn-outline-secondary btn-sm px-3 rounded-pill"
                 target="_blank"
                 rel="noopener noreferrer"
               >

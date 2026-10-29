@@ -5,7 +5,7 @@ import ProductCard from "../../products/components/ProductCard";
 function Product() {
   return (
     <div
-      className="py-5 bg-secondary-subtle"
+      className="py-5 bg-light-subtle"
     >
       <section id="project">
         <Container>

@@ -1,47 +1,41 @@
 import { FaCheck } from "react-icons/fa";
+import { FaLayerGroup } from "react-icons/fa6";
 
-export default function ProductFeature({ title, description }) {
+export default function ProductFeature({ title,description, items = [] }) {
   return (
-    <div className="d-flex align-items-start h-100 p-2 rounded-2 ">
-      {/* ICON */}
-      <div
-        className="d-flex align-items-center justify-content-center flex-shrink-0 rounded-2 me-3"
-        style={{
-          width: "28px",
-          height: "28px",
-          backgroundColor: "#ebf5fb",
-        }}
-      >
-        <FaCheck
-          style={{
-            color: "#2980b9",
-            fontSize: "11px",
-          }}
-        />
-      </div>
-
-      {/* CONTENT */}
-      <div className="flex-grow-1">
-        <h6
-          className="fw-semibold text-dark mb-1"
-          style={{
-            fontSize: "0.9rem",
-            lineHeight: "1.4",
-          }}
-        >
+    <div className="h-100 p-4 border card rounded-4 bg-white">
+      {/* TITLE AND DESCRIPTION*/}
+      <div className="">
+        <h6 className="fw-bold text-success d-flex align-items-center gap-2">
+          <FaLayerGroup style={{ color: "gold", fontSize: "18px"}}/>
           {title}
         </h6>
-
-        <p
-          className="text-secondary mb-0"
-          style={{
-            fontSize: "0.8rem",
-            lineHeight: "1.6",
-          }}
-        >
-          {description}
-        </p>
+        <p className="text-secondary py-3 border-bottom" style={{ fontSize: "14px" }}>{description}</p>
       </div>
+
+      {/* FEATURE ITEMS */}
+      <ul className="list-unstyled mb-0 d-flex flex-column gap-2 px-2">
+        {items.map((item, index) => (
+          <li
+            key={index}
+            className="d-flex align-items-start gap-2 text-secondary"
+            style={{
+              fontSize: "0.875rem",
+              lineHeight: "1.6",
+            }}
+          >
+            <FaCheck
+              className="flex-shrink-0 mt-1"
+              style={{
+                color: "#27ae60",
+                fontSize: "11px",
+              }}
+            />
+
+            <span>{item}</span>
+          </li>
+        ))}
+      </ul>
     </div>
-  )
+  );
 }

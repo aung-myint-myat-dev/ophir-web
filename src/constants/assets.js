@@ -66,6 +66,7 @@ import zogenealogy_logo_img from "../assets/images/project_logos_png_version/zog
 import ophir_school_management_logo_img from "../assets/images/project_logos_png_version/ophir_school_management_logo.png";
 import cbm_logo_img from "../assets/images/project_logos_png_version/cbm_logo.png";
 import shop_pro_logo_img from "../assets/images/project_logos_png_version/shop_pro.png";
+import ophir_business_management_logo_img from "../assets/images/project_logos_png_version/ophir_business_management_logo.png"
 
 //icon pngs
 import icon1 from "../assets/images/icon1.png"
@@ -150,6 +151,7 @@ export {
   ophir_school_management_logo_img as ophir_school_management_logo,
   cbm_logo_img as cbm_logo,
   shop_pro_logo_img as shop_pro_logo,
+  ophir_business_management_logo_img as ophir_business_management_logo
 };
 
 export const icon = [
