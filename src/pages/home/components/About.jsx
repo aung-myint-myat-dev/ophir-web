@@ -2,17 +2,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Carousel from "react-bootstrap/Carousel";
-
 import { assets } from "../../../constants";
-
-// const project_logos = assets.project_logos;
-const images = [
-  ...assets.lovecar_previews,
-  ...assets.sayazaw_previews,
-  ...assets.foodburma_previews,
-  ...assets.frame,
-];
-
 function AppAbout() {
   return (
     <section id="about" className="bg-light overflow-hidden">

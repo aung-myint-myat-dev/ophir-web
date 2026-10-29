@@ -33,9 +33,9 @@ export default function ContactPage() {
                 <div className="d-flex align-items-center">
                   <FaPhoneAlt className="me-3" style={{ color: "#5bb450" }} />
                   <div>
-                    <a className="text-decoration-none text-dark fw-medium">
+                    <span className="text-decoration-none text-dark fw-medium">
                       09 456 335 110
-                    </a>
+                    </span>
                   </div>
                 </div>
 

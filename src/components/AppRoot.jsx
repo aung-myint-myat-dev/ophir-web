@@ -1,5 +1,4 @@
 import { assets } from "../constants";
-import { GiVacuumCleaner } from "react-icons/gi";
 
 const img1 = assets.APP_LOGO;
 const icon5 = assets.cleaning_icon[0];

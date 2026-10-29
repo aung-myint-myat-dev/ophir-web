@@ -122,7 +122,7 @@ export default function AboutUs() {
           <Col lg={5} md={12}>
             {/* Image */}
             <div className="w-10 h-12 overflow-hidden rounded-3">
-              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="banner image" className="w-100 h-100" />
+              <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="banner" className="w-100 h-100" />
             </div>
           </Col>
 
@@ -208,7 +208,7 @@ export default function AboutUs() {
           {/* RIGHT SIDE */}
           <Col lg={5} md={12}>
             <div className="w-10 h-12 overflow-hidden rounded-3">
-              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="banner image" className="w-100 h-100" />
+              <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="banner-2" className="w-100 h-100" />
             </div>
           </Col>
         </Row>

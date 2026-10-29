@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "../style/RelatedProducts.css"
 const RelatedProjects = ({ products = [], currentProductId }) => {

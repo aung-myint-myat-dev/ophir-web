@@ -103,7 +103,7 @@ export default function AppNavbar() {
 
                     // DROPDOWN NAV LINK
                     <li key={index} className="nav-item dropdown">
-                      <a className="dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      <span className="dropdown-toggle outline-none" role="button" data-bs-toggle="dropdown" aria-expanded="false">
 
                         <span
                           className={`btn border-0 bg-transparent fw-bold position-relative px-0 mx-2 ${isClearBackground && !scrolled
@@ -119,7 +119,7 @@ export default function AppNavbar() {
                         >
                           {link.label}
                         </span>
-                      </a>
+                      </span>
 
                       <ul className="dropdown-menu">
                         {link.items.map((item) => (

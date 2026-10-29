@@ -1,4 +1,3 @@
-import { IconBase } from "react-icons"
 import { Link } from "react-router-dom"
 
 export default function ProductCard({ product }) {

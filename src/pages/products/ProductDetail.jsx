@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { Container, Button, Row, Col, Carousel, Card } from "react-bootstrap";
+import { Container, Button, Row, Col, Carousel } from "react-bootstrap";
 import {
   FaArrowLeft,
 } from "react-icons/fa";
