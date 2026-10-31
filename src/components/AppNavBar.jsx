@@ -139,6 +139,7 @@ export default function AppNavbar() {
                       </ul>
                     </li>
                   ) : (
+                    
                     // NORMAL NAVLINK
                     <li className="nav-item mx-lg-2" key={index}>
                       <Link

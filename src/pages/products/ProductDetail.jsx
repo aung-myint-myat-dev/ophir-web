@@ -244,7 +244,7 @@ export default function ProductDetail() {
           {product.features && product.features.length > 0 ? (
             <Row className="g-3 g-md-4">
               {product.features.map((feature, index) => (
-                <Col xs={12} sm={6} lg={4} key={index}>
+                <Col sm={12} lg={6} xl={4} key={index}>
                   <ProductFeature
                     title={feature.title}
                     description={feature.description}
