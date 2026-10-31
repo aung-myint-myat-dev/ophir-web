@@ -1,0 +1,7 @@
+.product-detail-carousel .carousel-indicators button {
+  background-color: rgba(0, 128, 0, 0.517);
+}
+
+.product-detail-carousel .carousel-indicators button.active {
+  background-color: green;
+}

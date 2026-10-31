@@ -1,3 +1,4 @@
+import { truncateString } from "../../../utils/index"
 import { Link } from "react-router-dom"
 
 export default function ProductCard({ product }) {
@@ -27,7 +28,7 @@ export default function ProductCard({ product }) {
 
           {/* Descriptions */}
           <p className="card-text text-muted small mb-4 line-clamp-2">
-            {description?.slice(0, 70) + ' . . .' || "No description available for this project."}
+            {truncateString(description, 40) || "No description available for this project."}
           </p>
         </div>
 

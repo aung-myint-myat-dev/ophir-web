@@ -13,7 +13,7 @@ function Product() {
             <h2 className="fw-bold display-5 text-center mb-5">Our Products</h2>
           </div>
 
-          <Row className="g-4">
+          <Row className="g-md-4 g-2  ">
             {products.map((product) => (
               <Col key={product.id} lg={4} md={6} sm={12}>
                 <ProductCard product={product} />

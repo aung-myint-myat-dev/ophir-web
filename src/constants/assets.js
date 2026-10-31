@@ -52,6 +52,10 @@ import zogenealogy_3 from "../assets/images/zogenealogy_previews/zogenealogy_pre
 import zogenealogy_4 from "../assets/images/zogenealogy_previews/zogenealogy_preview_4.png";
 import zogenealogy_5 from "../assets/images/zogenealogy_previews/zogenealogy_preview_5.png";
 
+// ophir school management system previews
+import ophir_sms_preview_1 from "../assets/images/ophir_school_management_system_previews/preview1.png";
+import ophir_sms_preview_2 from "../assets/images/ophir_school_management_system_previews/preview2.png";
+
 // StarGrade Previews
 import stargrade_preview_1 from "../assets/images/stargrade-previews/1.png";
 
@@ -117,6 +121,11 @@ export const ophirpos_previews = [
   ophirpos_preview_7,
   ophirpos_preview_8,
 ];
+
+export const ophir_school_management_system_previews = [
+  ophir_sms_preview_1,
+  ophir_sms_preview_2,
+]
 
 export const stargrade_previews = [stargrade_preview_1];
 

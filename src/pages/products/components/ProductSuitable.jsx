@@ -1,40 +1,33 @@
 import { DynamicFaIcon } from "../../../components/DynamicFaIcon";
 
-export default function ProductSuitable({ iconName, label, description }) {
+export default function ProductSuitable({ iconName, label }) {
   return (
-    <div className="d-flex align-items-start gap-3">
+    <div className="d-flex flex-column align-items-center justify-content-center text-center h-100">
+      {/* ICON */}
       <div
-        className="flex-shrink-0 d-flex align-items-center justify-content-center rounded-3"
+        className="d-flex align-items-center justify-content-center rounded-circle mb-3"
         style={{
-          width: "52px",
-          height: "52px",
+          width: "72px",
+          height: "72px",
           backgroundColor: "#e8f5ee",
           color: "#198754",
-          fontSize: "1.3rem",
+          fontSize: "2rem",
         }}
       >
         <DynamicFaIcon iconName={iconName} />
       </div>
 
-      <div>
-        <h5
-          className="fw-bold text-dark mb-1"
-          style={{ fontSize: "1.15rem" }}
-        >
-          {label}
-        </h5>
+      {/* LABEL */}
+      <h6
+        className="fw-semibold text-dark mb-0"
+        style={{
+          fontSize: "1rem",
+          lineHeight: "1.5",
+        }}
+      >
+        {label}
+      </h6>
 
-        <p
-          className="text-secondary mb-0"
-          style={{
-            fontSize: "1rem",
-            lineHeight: "1.8",
-            maxWidth: "850px",
-          }}
-        >
-          {description}
-        </p>
-      </div>
     </div>
-  )
+  );
 }

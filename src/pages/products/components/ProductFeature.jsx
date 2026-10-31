@@ -1,20 +1,20 @@
 import { FaCheck } from "react-icons/fa";
 import { FaLayerGroup } from "react-icons/fa6";
 
-export default function ProductFeature({ title,description, items = [] }) {
+export default function ProductFeature({ title, description, items = [] }) {
   return (
-    <div className="h-100 p-4 border card rounded-4 bg-white">
+    <div className="h-100 p-4 border rounded-4 bg-white">
       {/* TITLE AND DESCRIPTION*/}
-      <div className="">
+      <div>
         <h6 className="fw-bold text-success d-flex align-items-center gap-2">
-          <FaLayerGroup style={{ color: "gold", fontSize: "18px"}}/>
+          <FaLayerGroup style={{ color: "gold", fontSize: "18px" }} />
           {title}
         </h6>
-        <p className="text-secondary py-3 border-bottom" style={{ fontSize: "14px" }}>{description}</p>
+        <p className="text-secondary py-md-4 py-2" style={{ fontSize: "13px" }}>{description}</p>
       </div>
 
       {/* FEATURE ITEMS */}
-      <ul className="list-unstyled mb-0 d-flex flex-column gap-2 px-2">
+      <ul className="list-unstyled mb-0 d-flex flex-column gap-3 px-2">
         {items.map((item, index) => (
           <li
             key={index}
@@ -31,7 +31,6 @@ export default function ProductFeature({ title,description, items = [] }) {
                 fontSize: "11px",
               }}
             />
-
             <span>{item}</span>
           </li>
         ))}

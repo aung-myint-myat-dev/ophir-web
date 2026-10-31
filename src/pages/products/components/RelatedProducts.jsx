@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import "../style/RelatedProducts.css"
+
 const RelatedProjects = ({ products = [], currentProductId }) => {
   const containerRef = useRef(null);
   const trackRef = useRef(null);
