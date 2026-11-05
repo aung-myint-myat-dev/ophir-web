@@ -190,8 +190,10 @@ export default function ProductDetail() {
       </section>
 
       {/* SUITABLE FOR SECTION */}
-      <section className="py-5 border-bottom">
-        <Container className="py-md-3">
+      <section className="py-5 border-bottom" style={{
+        backgroundColor: "#e8f5ee9d",
+      }}>
+        <Container className="py-md-2">
           <div className="text-center mb-4 mb-md-5">
             <h2 className="fw-bold text-dark mb-3">
               Suitable For
@@ -222,7 +224,7 @@ export default function ProductDetail() {
       </section>
 
       {/* FEATURES SECTION */}
-      <section className="py-5 border-bottom">
+      <section className="py-5 border-bottom" >
         <Container className="py-md-3">
 
           {/* HEADING */}

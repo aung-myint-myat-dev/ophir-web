@@ -6,7 +6,7 @@ import { assets } from "../../../constants";
 function AppAbout() {
   return (
     <section id="about" className="bg-light overflow-hidden">
-      <Container className="py-lg-5">
+      <Container>
         <Row className="pt-5 align-items-center g-5">
           {/* LEFT SIDE - TEXT CONTENT */}
           <Col lg={7} md={12}>

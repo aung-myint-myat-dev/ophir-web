@@ -15,7 +15,7 @@ export default function AppRoot() {
           <img
             src={img1}
             alt="Company Logo"
-            style={{ height: "55px", width: "70px" }}
+            style={{ height: "38px", }}
           />
           <span className="fw-bold fs-5 text-light">Ophir IT Solutions</span>
         </div>

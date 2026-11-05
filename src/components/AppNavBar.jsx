@@ -13,8 +13,7 @@ export default function AppNavbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const isClearBackground =
-    location.pathname === "/" || location.pathname === "/services";
+  const isClearBackground = location.pathname === "/services";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -139,7 +138,7 @@ export default function AppNavbar() {
                       </ul>
                     </li>
                   ) : (
-                    
+
                     // NORMAL NAVLINK
                     <li className="nav-item mx-lg-2" key={index}>
                       <Link

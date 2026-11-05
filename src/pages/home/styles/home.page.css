@@ -6,6 +6,56 @@ section {
   padding-top: var(--bs-navbar-height, 80px);
 }
 
+.home-slider {
+  width: 100%;
+  padding-top: 65px;
+  overflow: hidden;
+}
+
+.home-slider .carousel-item {
+  height: 70vh;
+  min-height: 400px;
+  max-height: 750px;
+  background-color: "white";
+}
+
+.home-slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
+/* Carousel indicators */
+.home-slider .carousel-indicators {
+  margin-bottom: 20px;
+}
+
+.home-slider .carousel-indicators button {
+  width: 30px;
+  height: 4px;
+  border-radius: 5px;
+}
+
+/* Navigation controls */
+.home-slider .carousel-control-prev,
+.home-slider .carousel-control-next {
+  width: 7%;
+}
+
+@media (max-width: 768px) {
+  .home-slider .carousel-item {
+    height: 45vh;
+    min-height: 280px;
+  }
+
+  .home-slider .carousel-control-prev,
+  .home-slider .carousel-control-next {
+    width: 10%;
+  }
+}
+
 
 /* NAVBAR */
 .nav-top {
@@ -477,6 +527,7 @@ section {
   .service-card h4 {
     font-size: 21px;
   }
+
   .service-card p {
     font-size: 15px;
   }
@@ -486,6 +537,7 @@ section {
   .service-card h4 {
     font-size: 20px;
   }
+
   .service-card p {
     font-size: 14px;
   }
@@ -860,7 +912,10 @@ section {
 }
 
 .pricing-card:hover {
-  transform: translateY(-10px); /* Lifts the card up */
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; /* Makes shadow deeper */
-  border-color: #5bb450 !important; /* Optional: highlights the border on hover */
+  transform: translateY(-10px);
+  /* Lifts the card up */
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+  /* Makes shadow deeper */
+  border-color: #5bb450 !important;
+  /* Optional: highlights the border on hover */
 }

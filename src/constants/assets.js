@@ -12,6 +12,10 @@ import slider_mobile from "../assets/images/slider-images/mobile.jpg";
 import slider_posrestaurant from "../assets/images/slider-images/pos&restaurant.jpg";
 import slider_webdevelopment from "../assets/images/slider-images/webdevelopment.jpg";
 
+// Home Banner Images
+import ophir_business_management_banner from "../assets/images/home-banner-images/home-obm.png";
+import school_management_banner from "../assets/images/home-banner-images/Education Management Dashboard UI.png";
+
 // FoodBurma Previews
 import foodburma_preview_ios_1 from "../assets/images/foodburma-previews/fb-1-portrait.png"
 import foodburma_preview_ios_2 from "../assets/images/foodburma-previews/fb-2-portrait.png"
@@ -89,6 +93,11 @@ export const slider_images = [
   slider_posrestaurant,
   slider_webdevelopment,
 ];
+
+export const home_banner_images = [
+  ophir_business_management_banner,
+  school_management_banner,
+]
 
 export const foodburma_previews = [
   // foodburma_preview_1,foodburma_preview_2

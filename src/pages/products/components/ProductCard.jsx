@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 export default function ProductCard({ product }) {
   const { name, slug, logo_path, description, production_links } = product
   return (
-    <div className="card border rounded-4 p-3 h-100">
+    <div className="card border rounded-4 p-3 h-100 shadow-sm">
       <div className="card-body d-flex flex-column justify-content-between">
 
         {/* Card Header & Logo Section */}
@@ -47,7 +47,7 @@ export default function ProductCard({ product }) {
               </a>
             ))}
           </div>
-          <Link className="align-self-end btn btn-success theme-success btn-sm rounded-pill px-3" to={`/products/${slug}`}>View More</Link>
+          <Link className="align-self-end btn btn-secondary theme-success btn-sm rounded-pill px-3" to={`/products/${slug}`}>View More</Link>
         </div>
 
       </div>

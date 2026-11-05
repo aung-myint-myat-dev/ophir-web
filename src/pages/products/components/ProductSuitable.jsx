@@ -9,8 +9,8 @@ export default function ProductSuitable({ iconName, label }) {
         style={{
           width: "72px",
           height: "72px",
-          backgroundColor: "#e8f5ee",
-          color: "#198754",
+          backgroundColor: "#f5b71a29",
+          color: "#F5B81A",
           fontSize: "2rem",
         }}
       >

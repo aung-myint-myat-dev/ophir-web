@@ -103,7 +103,7 @@
 }
 
 .related-project-link:hover .related-project-card {
-  transform: translateY(-3px);
+  transform: scale(1.1);
 }
 
 .related-project-logo {
