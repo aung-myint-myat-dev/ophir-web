@@ -13,7 +13,7 @@ import slider_posrestaurant from "../assets/images/slider-images/pos&restaurant.
 import slider_webdevelopment from "../assets/images/slider-images/webdevelopment.jpg";
 
 // Home Banner Images
-import ophir_business_management_banner from "../assets/images/home-banner-images/home-obm.png";
+import ophir_business_management_banner from "../assets/images/home-banner-images/opm_final.png";
 import school_management_banner from "../assets/images/home-banner-images/Education Management Dashboard UI.png";
 
 // FoodBurma Previews
